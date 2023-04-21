@@ -1,0 +1,79 @@
+.wrapper{
+    display: flex;
+    flex-flow: wrap row;
+    text-align: center;
+}
+
+.wrapper>*{
+    padding: 40px;
+    margin: 10px;
+    flex: 1 100%;
+
+}
+
+.child1{
+    background:tomato;
+    flex-basis: 15%;
+}
+
+.child2{
+    background: tomato;
+    flex-basis: 15%;
+}
+.child3{
+    background:tomato;
+    flex-basis: 15%;
+}
+
+.child4{
+    background: tomato;
+    flex-basis: 15%;
+}
+.child6{
+    background:orange;
+
+    flex-basis: 65%;
+}
+
+.child5{
+    background: tomato;
+    flex-basis: 15%;
+
+}
+
+.child7{
+    background:darkblue;
+    flex-basis: 40%;
+}
+
+.child8{
+    background: darkblue;
+    flex-basis: 40%;
+}
+
+
+.child9{
+    background: darkgreen;
+    flex-basis: 23%;
+
+}
+
+.child10{
+    background:darkgreen;
+    flex-basis: 23%;
+}
+
+.child11{
+    background: darkgreen;
+    flex-basis: 23%;
+}
+
+.child12{
+    background:darkgreen;
+    flex-basis: 23%;
+}
+
+.child13{
+    background: yellow;
+    flex-basis: 56%;
+}
