@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background: rgb(253, 253, 221);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'feature feature feature header header header header'
+        'sidebar products products products products products feature2'
+        'sidebar products products products products products .'
+        'sidebar bonus1 . . . bonus3 feature3'
+        'sidebar . bonus2 bonus2 . . bonus4'
+        'sidebar footer footer footer footer footer footer'
+    ;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr 1fr;
+    gap: 1em;
+    border: 10px solid rgb(255, 247, 244);
+}
+
+.item{
+    font-size: 20px;
+    padding: 10px;
+    background: rgb(255, 217, 28);
+}
+
+
+.feature{
+    grid-area: feature;
+    background: darkred;
+}
+
+.header{
+    grid-area: header;
+    background: black;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: rgb(0, 164, 0);
+}
+
+.products{
+    grid-area: products;
+    background: darkblue;
+}
+
+.feature2{
+    grid-area: feature2;
+    background: darkred;
+}
+
+.feature3{
+    grid-area: feature3;
+    background: orangered;
+}
+
+.bonus1{
+    grid-area: bonus1;
+    background: lightpink;
+}
+
+.bonus2{
+    grid-area: bonus2;
+    background: lightpink;
+}
+
+.bonus3{
+    grid-area: bonus3;
+    background: lightpink;
+}
+
+.bonus4{
+    grid-area: bonus4;
+    background: lightpink;
+}
+
+.footer{
+    grid-area: footer;
+    background: orange;
+}
+       
