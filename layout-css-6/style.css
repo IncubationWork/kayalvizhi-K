@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'head men men men'
+    'hero hero hero hero'
+    'main main . image'
+    'main main . extra'
+    'ban ban ban ban'
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    grid-template-rows: 0.5fr 4fr 1fr 1fr 1fr;
+
+  }
+
+  .item{
+    padding: 20px;
+    font-size: 20px;
+    background: rgba(243, 198, 139, 0.5);
+}
+
+.header{
+    grid-area: head;
+    background: rgb(2, 2, 6);;
+}
+
+.menu{
+    grid-area: men;
+    background: red;
+}
+
+.hero{
+    grid-area: hero;
+    background: rgb(81, 181, 243);
+}
+
+.main{
+    grid-area: main;
+    background: rgb(2, 2, 6);
+}
+
+.image{
+    grid-area: image;
+    background: lightcyan;
+    color: black;
+}
+
+.extra{
+    grid-area: extra;
+    background: lightseagreen;
+    color: black;
+}
+
+.banner{
+    grid-area: ban;
+    background: rgb(249, 213, 105);
+    color: black;
+    
+}
+
+@media(max-width:1024px){
+    .container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'head head head'
+    'hero hero hero'
+    'men main main'
+    'men ban ban'
+    'men extra image'
+    ;
+    grid-template-columns: 1fr 2fr 1fr;
+    
+    grid-template-rows: 0.5fr 2fr 2fr 1fr 1fr;
+    }
+}
+
+@media(max-width:767px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        'head'
+        'men'
+        'hero'
+        'main'
+        'ban'
+        'extra' 
+        'image'
+        ;
+        grid-template-columns: 1fr;
+        
+        grid-template-rows: 0.5fr 0.5fr 2fr 2fr 1fr 1fr 1fr;
+        }
+}
