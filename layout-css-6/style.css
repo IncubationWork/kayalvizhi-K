@@ -25,6 +25,7 @@
   .item{
     padding: 20px;
     font-size: 20px;
+    text-align: center;
     background: rgba(243, 198, 139, 0.5);
 }
 
@@ -40,6 +41,7 @@
 
 .hero{
     grid-area: hero;
+    line-height: 250px;
     background: rgb(81, 181, 243);
 }
 
