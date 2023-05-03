@@ -1,0 +1,339 @@
+*{
+    margin: 15px;
+    padding: 0;
+}
+
+.container{
+    height: 75vh;
+    width: 50vw;
+    display: grid;
+    grid-template-areas: 
+    'it1 it2 it3 it4'
+    'h1 h2 h3 h4'
+    'it5 . . .'
+    'h5 . . .'
+    ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr 1fr 0.25fr;
+    position: relative;
+    left: 25%;
+}
+
+
+.item1{
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: it1;
+    display: grid;
+    grid-template-areas: 
+    'cha chb chb1'
+    'chc cha1 chb1'
+    'chc1 chc1 chc1'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+.childa{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: cha;
+}
+
+.childb{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chb;
+}
+
+.childc{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chc;
+}
+
+.childa1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: cha1;
+}
+
+.childb1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chb1;
+}
+
+.childc1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chc1;
+}
+
+.head1{
+    text-align: center;
+    grid-area: h1;
+}
+
+.item2{
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: it2;
+    display: grid;
+    grid-template-areas: 
+    'chd che'
+    'chd chf'
+    ;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 1px;
+}
+.childd{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chd;
+}
+
+.childe{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: che;
+}
+
+.childf{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chf;
+}
+
+.head2{
+    text-align: center;
+    grid-area: h2;
+}
+
+.item3{
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: it3;
+    display: grid;
+    grid-template-areas: 
+    'chg chh chi'
+    'chg1 chh1 chi1'
+    'chg2 chh2 chi2'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+.childg{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chg;
+}
+
+.childh{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chh;
+}
+
+.childi{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chi;
+}
+
+.childg1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chg1;
+}
+
+.childh1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chh1;
+}
+
+.childi1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chi1;
+}
+
+.childg2{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chg2;
+}
+
+.childh2{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chh2;
+}
+
+.childi2{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chi2;
+}
+
+.head3{
+    text-align: center;
+    grid-area: h3;
+}
+
+.item4{
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: it4;
+    display: grid;
+    grid-template-areas: 
+    'chga chha chia'
+    'chg1a chh1a chi1a'
+    'chg2a chh2a chi2a'
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px;
+}
+.childga{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chga;
+}
+
+.childha{
+    margin: 0;
+    border: 2px solid green;
+    background: green;
+    grid-area: chha;
+}
+
+.childia{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chia;
+}
+
+.childg1a{
+    margin: 0;
+    border: 2px solid green;
+    background: green;
+    grid-area: chg1a;
+}
+
+.childh1a{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chh1a;
+}
+
+.childi1a{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chi1a;
+}
+
+.childg2a{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chg2a;
+}
+
+.childh2a{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chh2a;
+}
+
+.childi2a{
+    margin: 0;
+    border: 2px solid green;
+    background: green;
+    grid-area: chi2a;
+}
+
+.head4{
+    text-align: center;
+    grid-area: h4;
+}
+
+.item5{
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    grid-area: it5;
+    display: grid;
+    grid-template-areas: 
+    'chl chm'
+    'chl1 chm1'
+
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px;
+}
+
+.childl{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chl;
+}
+
+.childm{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chm;
+}
+
+.childl1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chl1;
+}
+
+.childm1{
+    margin: 0;
+    border: 2px solid black;
+    background: black;
+    grid-area: chm1;
+}
+
+.head5{
+    text-align: center;
+    grid-area: h5;
+}
+
