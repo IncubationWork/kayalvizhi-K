@@ -822,7 +822,6 @@ opacity: 1;
 
     .main-content .main-container .main-content-left .img1-head .first-line{
         font-size: 18px;
-        opacity: 0.5;
     }
 
     .main-content .main-container .main-content-left .img1-head .second-line{
@@ -850,12 +849,160 @@ opacity: 1;
         width: 100%;
         display: flex;
         column-gap: 5px;
+    
     }
 
     .main-content .main-container .main-content-left .img1-set .img1-list img{
         height: 133px;
         width: 132.50px;
+        cursor: pointer;
     }
+
+    .main-content .main-container .main-content-left .img1-set .img1-list .img-label{
+        height: 133px;
+        width: 132.50px;
+        font-size: 1rem;
+        padding: 3.5rem 1.4rem;
+        margin: 0;
+        color: white;
+        background-color: hsla(0, 0%, 0%, 0.64);
+        margin-left: -8.52rem;
+    }
+    /*First Image Foot*/
+    .main-content .main-container .main-content-left .img1-foot{
+        height: 24px;
+        width: 100%;
+    }
+
+    .main-content .main-container .main-content-left .img1-foot .img1-foot-content{
+        height: 100%;
+        width: 100%;
+        padding-left: 40%;
+    }
+
+    .main-content .main-container .main-content-left .img1-foot .img1-foot-content a{
+        color: rgb(57, 128, 156);
+    }
+
+    .main-content .main-container .main-content-left .img1-foot .img1-foot-content a:hover{
+        text-decoration: underline;
+    }
+
+    /*Second Image Head*/
+    .main-content .main-container .main-content-left .img2-head{
+        height: 63px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .main-content .main-container .main-content-left .img2-head .first-line{
+        font-size: 18px;
+        display: flex;
+        gap: 5px;
+    }
+
+    .main-content .main-container .main-content-left .img2-head .first-line .fl-img{
+        height: 20px;
+        width: 45px;
+        color: #fff;
+        font-size: 15px;
+        background-color: orange;
+        border: 1px solid orange;
+        padding-left: 2px;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .main-content .main-container .main-content-left .img2-head .second-line{
+        position: absolute;
+        right: 10px;
+    }
+
+    .main-content .main-container .main-content-left .img2-head .second-line a{
+        color: rgb(57, 128, 156);
+    }
+
+    .main-content .main-container .main-content-left .img2-head .second-line a:hover{
+        text-decoration: underline;
+    }
+
+    /*Second Image set*/
+    .main-content .main-container .main-content-left .img2-set{
+        height: 185px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .main-content .main-container .main-content-left .img2-set .img2-list{
+        height: 185px;
+        width: 100%;
+        display: flex;
+        column-gap: 5px;
+        overflow-x: hidden;
+    
+    }
+
+    .main-content .main-container .main-content-left .img2-set .img2-list img{
+        height: 175px;
+        max-width: 100%;
+        cursor: pointer;
+    }
+
+    .layer{
+        font-size: 1rem;
+        line-height: 1.5;
+        padding-left:1rem;
+        padding-top: 8rem;
+        margin: 0;
+        color: white;
+        height: 100%;
+        
+        margin-left: -20rem;
+        margin-right: 6.5rem;
+        position: relative;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+    .layer h5{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .layer h6{
+        color: gray;
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    .layer:hover h5,.layer:hover h6{
+        opacity: 1;
+    }
+
+    .main-content .main-container .main-content-left .img2-set .img2-list img:hover .layer{
+        visibility: visible;
+    }
+
+    /*.main-content .main-container .main-content-left .img2-set .img2-list .img2-label{
+        height: 133px;
+        width: 132.50px;
+        font-size: 1rem;
+        padding: 3.5rem 1.4rem;
+        margin: 0;
+        color: white;
+        background-color: hsla(0, 0%, 0%, 0.64);
+        margin-left: -8.52rem;
+    }*/
+    
+
+
+
+
+
 
     /*Main Right*/
     .main-content .main-container .main-content-right{
