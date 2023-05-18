@@ -73,6 +73,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -300px -197px;
     zoom: 0.15;
+    -moz-transform: scale(0.15,0.15);
     cursor: pointer;
 }
 
@@ -82,6 +83,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -397px -195px;
     zoom: 0.15;
+    -moz-transform: scale(0.15,0.15);
     cursor: pointer;
 }
 
@@ -92,6 +94,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: 0px -464px;
     zoom: 0.23;
+    -moz-transform: scale(0.23,0.23);
     cursor: pointer;
 }
 
@@ -105,6 +108,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -824px -895px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
     cursor: pointer;
 }
 
@@ -114,6 +118,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -992px -841px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
     cursor: pointer;
 }
 
@@ -131,6 +136,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -636px -468px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 }
 
 
@@ -576,6 +582,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -760px -894px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 }
 
 #color-dot{
@@ -584,6 +591,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -564px -895px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 }
 
 #color-grid{
@@ -592,6 +600,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -629px -895px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 }
 
 #color-grid2{
@@ -600,6 +609,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -695px -895px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 }
 
 .color-display .display-image div{
@@ -668,6 +678,7 @@ html{
     background: url(sprite_image.png) no-repeat;
     background-position: -809px -633px;
     zoom: 0.5;
+    -moz-transform: scale(0.5,0.5);
 
 }
 
@@ -796,6 +807,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -1054px -212px;
         zoom: 0.5;
+        -moz-transform: scale(0.5,0.5);
     }
 
     /*head1 right*/
@@ -840,6 +852,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -988px -885px;
         zoom: 0.4;
+        -moz-transform: scale(0.4,0.4);
     }
 
     #square-pat{
@@ -848,6 +861,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -441px -1022px;
         zoom: 0.5;
+        -moz-transform: scale(0.5,0.5);
     }
 
     #square-pat:hover{
@@ -856,6 +870,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -508px -1023px;
         zoom: 0.5;
+        -moz-transform: scale(0.5,0.5);
         opacity: 1;
     }
 
@@ -865,6 +880,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -376px -952px;
         zoom: 0.5;
+        -moz-transform: scale(0.5,0.5);
     }
 
     #rect-pat{
@@ -873,6 +889,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -452px -951px;
         zoom: 0.5;
+        -moz-transform: scale(0.5,0.5);
     }
 
     #rect-pat:hover{
@@ -881,6 +898,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -528px -951px;
         zoom: 0.52;
+        -moz-transform: scale(0.52,0.52);
     }
     /*First Image Head*/
     .main-content .main-container .main-content-left .img1-head{
@@ -1054,6 +1072,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -635px -506px;
         zoom: 0.4;
+        -moz-transform: scale(0.4,0.4);
     }
     #command{
         width: 33px;
@@ -1061,6 +1080,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -635px -986px;
         zoom: 0.4;
+        -moz-transform: scale(0.4,0.4);
     }
     #plus-box{
         width: 32px;
@@ -1068,6 +1088,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -612px -1021px;
         zoom: 0.4;
+        -moz-transform: scale(0.4,0.4);
     }
 
     .layer{
@@ -1765,10 +1786,12 @@ html{
         cursor: pointer;
         flex-shrink: 1;
         flex-grow: 1;
+        
     }
     /*Start Layer-0*/
     .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-0{
         visibility: visible;
+        position: relative;
     }
 
     .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-0 .sub-menu{
@@ -1792,27 +1815,35 @@ html{
         opacity: 1;
         transition: 0.5s;
     }
+    .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-0 .three-dot{
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        opacity: 0;
+    }
+
+    .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-0:hover .three-dot{
+        opacity: 1;
+    }
 
     .th-layer-0{
         font-size: 1rem;
         line-height: 1.5;
         padding-left:1rem;
         padding-top: 8rem;
-        padding-right: 3rem;
         margin: 0;
         color: white;
-        height: 100%;
-        margin-left: -18rem;
-        position: relative;
+
+        margin-left: -24.6rem;
         white-space: nowrap;
         text-overflow: ellipsis;
         cursor: pointer;
     }
 
     .th-layer-0 h5{
-        margin-right: 121px;
+        margin-right: 175px;
         margin-left: 0;
-        width: 100px;
+        width: 200px;
         opacity: 0;
         transition: 0.5s;
     }
@@ -1833,6 +1864,7 @@ html{
 /*Start Layer-1*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-1{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-1 .sub-menu{
@@ -1857,26 +1889,35 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-1 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-1:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-1{
     font-size: 1rem;
     line-height: 1.5;
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
     margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
+
+    margin-left: -24.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .th-layer-1 h5{
-    margin-right: 121px;
+    margin-right: 175px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -1896,6 +1937,7 @@ html{
 /*Start Layer-2*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-2{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-2 .sub-menu{
@@ -1920,26 +1962,35 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-2 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-2:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-2{
     font-size: 1rem;
     line-height: 1.5;
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
     margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
+
+    margin-left: -23.3rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .th-layer-2 h5{
-    margin-right: 121px;
+    margin-right: 175px;
     margin-left: 0;
-    width: 100px;
+    width: 180px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -1958,6 +2009,7 @@ html{
 /*Start Layer-3*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-3{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-3 .sub-menu{
@@ -1982,26 +2034,35 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-3 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-3:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-3{
     font-size: 1rem;
     line-height: 1.5;
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
     margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
+
+    margin-left: -24.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .th-layer-3 h5{
-    margin-right: 121px;
+    margin-right: 175px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2020,6 +2081,7 @@ html{
 /*Start Layer-4*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-4{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-4 .sub-menu{
@@ -2044,26 +2106,35 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-4 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-4:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-4{
     font-size: 1rem;
     line-height: 1.5;
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
     margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
+
+    margin-left: -24.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .th-layer-4 h5{
-    margin-right: 121px;
+    margin-right: 175px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2082,6 +2153,7 @@ html{
 /*Start Layer-5*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-5{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-5 .sub-menu{
@@ -2106,26 +2178,35 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-5 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-5:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-5{
     font-size: 1rem;
     line-height: 1.5;
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
     margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
+
+    margin-left: -24.6rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
 .th-layer-5 h5{
-    margin-right: 121px;
+    margin-right: 175px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2144,6 +2225,7 @@ html{
 /*Start Layer-6*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-6{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-6 .sub-menu{
@@ -2168,26 +2250,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-6 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-6:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-6{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-6 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2206,6 +2292,7 @@ html{
 /*Start Layer-7*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-7{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-7 .sub-menu{
@@ -2230,26 +2317,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-7 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-7:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-7{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-7 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2268,6 +2359,7 @@ html{
 /*Start Layer-8*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-8{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-8 .sub-menu{
@@ -2292,26 +2384,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-8 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-8:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-8{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-8 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2330,6 +2426,7 @@ html{
 /*Start Layer-9*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-9{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-9 .sub-menu{
@@ -2354,26 +2451,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-9 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-9:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-9{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-9 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2392,6 +2493,7 @@ html{
 /*Start Layer-10*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-10{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-10 .sub-menu{
@@ -2416,26 +2518,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-10 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-10:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-10{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
-.th-layer-10 h5{
-    margin-right: 121px;
+/*.th-layer-10 h5{
+    margin-right: 80px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2444,7 +2550,7 @@ html{
     color: gray;
     opacity: 0;
     transition: 0.5s;
-}
+}*/
 
 .th-layer-10:hover h5{
     opacity: 1;
@@ -2454,6 +2560,7 @@ html{
 /*Start Layer-11*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-11{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-11 .sub-menu{
@@ -2478,26 +2585,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-11 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-11:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-11{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-11 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2516,6 +2627,7 @@ html{
 /*Start Layer-12*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-12{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-12 .sub-menu{
@@ -2540,26 +2652,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-12 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-12:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-12{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-12 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2578,6 +2694,7 @@ html{
 /*Start Layer-13*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-13{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-13 .sub-menu{
@@ -2602,26 +2719,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-13 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-13:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-13{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-13 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2640,6 +2761,7 @@ html{
 /*Start Layer-14*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-14{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-14 .sub-menu{
@@ -2664,26 +2786,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-14 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-14:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-14{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-14 h5{
-    margin-right: 121px;
+    margin-right: 105px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2702,6 +2828,7 @@ html{
 /*Start Layer-15*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-15{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-15 .sub-menu{
@@ -2726,26 +2853,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-15 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-15:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-15{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-15 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2764,6 +2895,7 @@ html{
 /*Start Layer-16*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-16{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-16 .sub-menu{
@@ -2788,26 +2920,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-16 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-16:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-16{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-16 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2826,6 +2962,7 @@ html{
 /*Start Layer-17*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-17{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-17 .sub-menu{
@@ -2850,26 +2987,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-17 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-17:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-17{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-17 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2888,6 +3029,7 @@ html{
 /*Start Layer-18*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-18{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-18 .sub-menu{
@@ -2912,26 +3054,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-18 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-18:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-18{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-18 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -2950,6 +3096,7 @@ html{
 /*Start Layer-19*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-19{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-19 .sub-menu{
@@ -2974,26 +3121,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-19 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-19:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-19{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-19 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -3012,6 +3163,7 @@ html{
 /*Start Layer-20*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-20{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-20 .sub-menu{
@@ -3036,26 +3188,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-20 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-20:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-20{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-20 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -3074,6 +3230,7 @@ html{
 /*Start Layer-21*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-21{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-21 .sub-menu{
@@ -3098,26 +3255,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-21 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-21:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-21{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-21 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -3136,6 +3297,7 @@ html{
 /*Start Layer-22*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-22{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-22 .sub-menu{
@@ -3160,26 +3322,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-22 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-22:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-22{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-22 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -3198,6 +3364,7 @@ html{
 /*Start Layer-23*/
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-23{
     visibility: visible;
+    position: relative;
 }
 
 .main-content .main-container .main-content-left .img4-set .img4-list .th-layer-23 .sub-menu{
@@ -3222,26 +3389,30 @@ html{
     transition: 0.5s;
 }
 
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-23 .three-dot{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    opacity: 0;
+}
+
+.main-content .main-container .main-content-left .img4-set .img4-list .th-layer-23:hover .three-dot{
+    opacity: 1;
+}
+
 .th-layer-23{
-    font-size: 1rem;
-    line-height: 1.5;
+    
     padding-left:1rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    margin: 0;
     color: white;
-    height: 100%;
-    margin-left: -18rem;
-    position: relative;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin-left: -20rem;
     cursor: pointer;
 }
 
 .th-layer-23 h5{
-    margin-right: 121px;
+    margin-right: 100px;
     margin-left: 0;
-    width: 100px;
+    width: 200px;
     opacity: 0;
     transition: 0.5s;
 }
@@ -3438,6 +3609,7 @@ html{
         background: url(sprite_image.png) no-repeat;
         background-position: -1083px -968px;
         zoom: 0.26;
+        -moz-transform: scale(0.26,0.26);
     }
 
     .main-content .main-container .main-content-right .main-container-right .third-right-container ul li div{
