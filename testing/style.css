@@ -829,15 +829,19 @@ html{
         width: 100%;
         display: flex;
         font-size: 15px;
-        opacity: 0.5;
         justify-content: right;
         align-items: center;
         cursor: pointer;
 
     }
+    .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 .left1-text{
+        color: #929292;
+    }
 
-    .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 .right1-text{
+    .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 .right1-text
+    {
         padding-left: 35px;
+        color: #929292;
     }
 
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
@@ -940,6 +944,7 @@ html{
         display: flex;
         column-gap: 5px;
         overflow-x: hidden;
+        position: relative;
     
     }
 
@@ -950,15 +955,19 @@ html{
         flex: 1 1 0px;
     }
 
+    
+
     .main-content .main-container .main-content-left .img1-set .img1-list .img-label{
         height: 133px;
-        width: 16%;
+        width: 12%;
         font-size: 100%;
         padding: 5.2% 2%;
         margin: 0;
         color: white;
         background-color: hsla(0, 0%, 0%, 0.64);
         margin-left: -12.5%;
+        position: absolute;
+        right: 0;
     }
     /*First Image Foot*/
     .main-content .main-container .main-content-left .img1-foot{
@@ -1387,7 +1396,8 @@ html{
 
     .main-content .main-container .main-content-left .img3-set .img3-list img{
         height: 175px;
-        max-width: 100%;
+        max-width: 30%;
+        min-width: 10%;
         cursor: pointer;
         flex-grow: 1;
     }
@@ -3554,6 +3564,7 @@ html{
         padding-right: 5%;
         color: #128fdc;
         font-size: 15px;
+        font-family: "Proxima Nova", "helvetica neue", helvetica, arial, sans-serif;
     }
 
     .main-content .main-container .main-content-right .main-container-right .second-right-container .button-bunch .img1-head .second-line:hover{
