@@ -25,7 +25,7 @@ html{
 }
 
 
-@media(max-width:767px){
+@media(max-width:700px){
 
    .navbar, .color-panel, .head1-left, .main-content-left .img1-head, .main-content-left .img1-set,
    .header .head-wrap .social_image .search-box .input-search, 
@@ -44,10 +44,6 @@ html{
    .header .head-wrap .social_image .search-box .input-search, .header .head-wrap .social_image #upload_image{
     display: none;
    }
-
-   .navbar .invisible-icon{
-    visibility: visible;
-    }
 
    .grid-container{
     width: 100vw;
@@ -102,14 +98,21 @@ html{
     background: var(--bg);
     height: 50px;   
 }
+@media(max-width:700px){
+.header img{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+}
 .head-wrap{
     height: 50px;
     align-items: center;
     justify-content: space-between;
 }
-@media(max-width:767px){
+@media(max-width:700px){
     .head-wrap{
-        width: 100%;
+        width: 70%;
         margin: 0;
         align-items: center;
         justify-content: space-between;
@@ -122,10 +125,7 @@ html{
     position: absolute;
     left: 10%;
 }
-.navbar .invisible-icon{
-    visibility: hidden;
-    display: none;
-}
+
 .navbar a{
     color: white;
     padding: 8px 14px;
@@ -136,7 +136,7 @@ html{
     padding: 8px 14px;
     align-items: center;
 }
-@media(max-width:767px){
+@media(max-width:700px){
     .social_image{
         width: 400px;
         justify-content: end;
@@ -192,7 +192,7 @@ html{
     -moz-transform: scale(0.5,0.5);
     cursor: pointer;
 }
-@media(max-width:767px){
+@media(max-width:700px){
     #bell_image{
         padding-right: 55px;
         margin-right: 55px;
@@ -206,7 +206,7 @@ html{
     cursor: pointer;
 }
 
-@media(max-width:767px){
+@media(max-width:700px){
     .social_image img{
         margin-right: 10px;
     }
@@ -220,7 +220,7 @@ html{
     -moz-transform: scale(0.5,0.5);
 }
 
-@media(max-width:767px){
+@media(max-width:700px){
     #search_icon{
         width: 46px;
         height: 42px;
@@ -259,7 +259,7 @@ html{
     transition: all .5s ease-in-out;
     background: rgb(206, 205, 205);
 }
-@media(max-width:767px){
+@media(max-width:700px){
     .btn-search{
         width: 40px;
         height: 30px;
@@ -296,7 +296,7 @@ html{
     width: 80%;
     border-bottom: 1px solid rgba(138, 138, 138, 0.3);   
 }
-@media(max-width:767px) {
+@media(max-width:700px) {
     .navbar_sec .list{
         margin: 0;
         height: 50px;
@@ -630,7 +630,7 @@ html{
         width: 80%;
         margin: 0 auto;
     }
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container{
             height: 200rem;
             width: 100%;
@@ -644,7 +644,7 @@ html{
         width: 77%;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left{
             height: 200rem;
             width: 100%;
@@ -701,7 +701,7 @@ html{
         cursor: pointer;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-arrow{
             justify-content: end;
         }
@@ -852,14 +852,14 @@ html{
         position: relative;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
     .main-content .main-container .main-content-left .img2-head{
         height: 33px;
         padding-left: 15px;
     }
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .img3-head{
             height: 33px;
             padding-left: 15px;
@@ -889,7 +889,7 @@ html{
         position: absolute;
         right: 10px;
     }
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .img2-head .second-line{
             position: absolute;
             right: 30px;
@@ -900,7 +900,7 @@ html{
         right: 10px;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .img3-head .second-line{
             position: absolute;
             right: 30px;
@@ -1400,7 +1400,7 @@ html{
         position: relative;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .img4-head{
             padding-left: 15px;
         }
@@ -1417,7 +1417,7 @@ html{
         right: 10px;
     }
 
-    @media(max-width:767px) {
+    @media(max-width:700px) {
         .main-content .main-container .main-content-left .img4-head .second-line{
             position: absolute;
             right: 30px;
