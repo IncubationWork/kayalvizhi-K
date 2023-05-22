@@ -17,6 +17,8 @@ html{
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
 }
+
+
 /*Header Part*/
 
 .header{
@@ -1798,7 +1800,7 @@ html{
         flex-grow: 1;
         
     }
-    /*Start Layer-0*/
+    /*Start Layer-0*//*
     .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-0{
         visibility: visible;
         position: relative;
@@ -1866,12 +1868,12 @@ html{
 
     .th-layer-0:hover h5{
         opacity: 1;
-    }
+    }*/
 
     /*End*/
 
    
-/*Start Layer-1*/
+/*Start Layer-1*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-1{
     visibility: visible;
     position: relative;
@@ -1941,10 +1943,11 @@ html{
 .th-layer-1:hover h5{
     opacity: 1;
 }
+*/
 
 /*End*/
 
-/*Start Layer-2*/
+/*Start Layer-2*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-2{
     visibility: visible;
     position: relative;
@@ -2014,9 +2017,9 @@ html{
 .th-layer-2:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-3*/
+/*Start Layer-3*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-3{
     visibility: visible;
     position: relative;
@@ -2086,9 +2089,9 @@ html{
 .th-layer-3:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-4*/
+/*Start Layer-4*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-4{
     visibility: visible;
     position: relative;
@@ -2158,9 +2161,9 @@ html{
 .th-layer-4:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-5*/
+/*Start Layer-5*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-5{
     visibility: visible;
     position: relative;
@@ -2230,9 +2233,9 @@ html{
 .th-layer-5:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-6*/
+/*Start Layer-6*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-6{
     visibility: visible;
     position: relative;
@@ -2297,9 +2300,9 @@ html{
 .th-layer-6:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-7*/
+/*Start Layer-7*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-7{
     visibility: visible;
     position: relative;
@@ -2363,10 +2366,10 @@ html{
 
 .th-layer-7:hover h5{
     opacity: 1;
-}
+}*/
 
 /*End*/
-/*Start Layer-8*/
+/*Start Layer-8*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-8{
     visibility: visible;
     position: relative;
@@ -2431,9 +2434,9 @@ html{
 .th-layer-8:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-9*/
+/*Start Layer-9*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-9{
     visibility: visible;
     position: relative;
@@ -2498,9 +2501,10 @@ html{
 .th-layer-9:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-10*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-10{
     visibility: visible;
     position: relative;
@@ -2546,7 +2550,7 @@ html{
     color: white;
     margin-left: -20rem;
     cursor: pointer;
-}
+}*/
 
 /*.th-layer-10 h5{
     margin-right: 80px;
@@ -2560,14 +2564,14 @@ html{
     color: gray;
     opacity: 0;
     transition: 0.5s;
-}*/
+}
 
 .th-layer-10:hover h5{
     opacity: 1;
-}
+}*/
 
 /*End*/
-/*Start Layer-11*/
+/*Start Layer-11*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-11{
     visibility: visible;
     position: relative;
@@ -2631,10 +2635,10 @@ html{
 
 .th-layer-11:hover h5{
     opacity: 1;
-}
+}*/
 
 /*End*/
-/*Start Layer-12*/
+/*Start Layer-12*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-12{
     visibility: visible;
     position: relative;
@@ -2699,9 +2703,9 @@ html{
 .th-layer-12:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-13*/
+/*Start Layer-13*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-13{
     visibility: visible;
     position: relative;
@@ -2766,9 +2770,9 @@ html{
 .th-layer-13:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-14*/
+/*Start Layer-14*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-14{
     visibility: visible;
     position: relative;
@@ -2833,9 +2837,9 @@ html{
 .th-layer-14:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-15*/
+/*Start Layer-15*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-15{
     visibility: visible;
     position: relative;
@@ -2900,9 +2904,9 @@ html{
 .th-layer-15:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
-/*Start Layer-16*/
+/*Start Layer-16*//*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-16{
     visibility: visible;
     position: relative;
@@ -2967,9 +2971,10 @@ html{
 .th-layer-16:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-17*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-17{
     visibility: visible;
     position: relative;
@@ -3034,9 +3039,10 @@ html{
 .th-layer-17:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-18*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-18{
     visibility: visible;
     position: relative;
@@ -3101,9 +3107,11 @@ html{
 .th-layer-18:hover h5{
     opacity: 1;
 }
+*/
 
 /*End*/
 /*Start Layer-19*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-19{
     visibility: visible;
     position: relative;
@@ -3168,9 +3176,11 @@ html{
 .th-layer-19:hover h5{
     opacity: 1;
 }
+*/
 
 /*End*/
 /*Start Layer-20*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-20{
     visibility: visible;
     position: relative;
@@ -3235,9 +3245,10 @@ html{
 .th-layer-20:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-21*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-21{
     visibility: visible;
     position: relative;
@@ -3302,9 +3313,10 @@ html{
 .th-layer-21:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-22*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-22{
     visibility: visible;
     position: relative;
@@ -3369,9 +3381,10 @@ html{
 .th-layer-22:hover h5{
     opacity: 1;
 }
-
+*/
 /*End*/
 /*Start Layer-23*/
+/*
 .main-content .main-container .main-content-left .img4-set .img4-list img:hover .th-layer-23{
     visibility: visible;
     position: relative;
@@ -3437,8 +3450,8 @@ html{
     opacity: 1;
 }
 
-/*End*/
 
+*/
 
     
 
