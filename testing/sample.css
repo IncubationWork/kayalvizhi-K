@@ -201,6 +201,8 @@ html{
     #bell_image{
         padding-right: 55px;
         margin-right: 55px;
+        position: absolute;
+        left: 700px;
     }
 }
 
@@ -214,6 +216,9 @@ html{
 @media(max-width:600px){
     .social_image img{
         margin-right: 10px;
+        position: absolute;
+        left: 410px;
+        top: 0;
     }
 }
 #search_icon{
@@ -272,7 +277,7 @@ html{
         outline: none;
         cursor: pointer;
         position: absolute;
-        left: 210px;
+        left: 150px;
         background: transparent;
     }
 }
