@@ -202,7 +202,7 @@ html{
         padding-right: 55px;
         margin-right: 55px;
         position: absolute;
-        left: 700px;
+        left: 88%;
     }
 }
 
@@ -217,7 +217,7 @@ html{
     .social_image img{
         margin-right: 10px;
         position: absolute;
-        left: 410px;
+        left: 105%;
         top: 0;
     }
 }
@@ -277,7 +277,7 @@ html{
         outline: none;
         cursor: pointer;
         position: absolute;
-        left: 150px;
+        left: 40%;
         background: transparent;
     }
 }
