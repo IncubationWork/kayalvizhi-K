@@ -277,7 +277,7 @@ html{
         outline: none;
         cursor: pointer;
         position: absolute;
-        left: 40%;
+        right: 45%;
         background: transparent;
     }
 }
