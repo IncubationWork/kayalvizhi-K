@@ -28,7 +28,6 @@ html{
 @media(max-width:600px){
 
    .navbar, .color-panel, .head1-left, .main-content-left .img1-head, .main-content-left .img1-set,
-   .header .head-wrap .social_image .search-box .input-search, 
    .main-content-left .img1-foot{
     visibility: hidden;
    }
@@ -41,7 +40,7 @@ html{
    .head1-right .head1-right-container .right-content1 .cross-pat,
    .head1-right .head1-right-container .right-content1 .rect-pat,
    .main-content-right, .header .head-wrap .social_image .upload_image,
-   .header .head-wrap .social_image .search-box .input-search, .header .head-wrap .social_image #upload_image,
+    .header .head-wrap .social_image #upload_image,
    .main-content .main-container .main-content-left .img3-head, .main-content .main-container .main-content-left .img3-set{
     display: none;
    }
@@ -220,6 +219,7 @@ html{
         position: absolute;
         left: 105%;
         top: 0;
+        z-index: -1;
     }
 }
 #search_icon{
@@ -258,6 +258,17 @@ html{
     transition: all .5s ease-in-out;
     background: rgb(206, 205, 205);
 }
+
+@media(max-width:600px){
+    .input-search{
+        height: 30px;
+        width: 30px;
+        border-style: none;
+        padding-left: 50px;
+        outline: none;
+        background: black;
+    }
+}
 .btn-search{
     width: 30px;
     height: 30px;
@@ -271,15 +282,43 @@ html{
     background: rgb(206, 205, 205);
 }
 @media(max-width:600px){
+
+    .head-wrap{
+        position: relative;
+    }
+    .search-box{
+        height: 30px;
+        width: 410px;
+        position: absolute;
+        left: -10px;
+        background: transparent;
+    }
+
+    .btn-search:focus .search-box{
+        z-index: 1;
+        background: black;
+    }
+
     .btn-search{
         width: 40px;
         height: 30px;
         border-style: none;
         outline: none;
         cursor: pointer;
-        position: absolute;
-        left: 15%;
+        left: 45%;
         background: transparent;
+        z-index: 1;
+    }
+
+    .btn-search:focus ~ .input-search{
+        width: 80%;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+    }
+
+    .btn-search:focus{
+        background-color: transparent;
     }
 }
 
