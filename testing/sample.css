@@ -204,6 +204,8 @@ html{
         position: absolute;
         left: 88%;
     }
+
+    
 }
 
 .social_image img{
@@ -231,16 +233,6 @@ html{
     -moz-transform: scale(0.5,0.5);
 }
 
-@media(max-width:600px){
-    #search_icon{
-        width: 46px;
-        height: 42px;
-        background: url(sprite_image.png) no-repeat;
-        background-position: -940px -612px;
-        zoom: 0.55;
-        -moz-transform: scale(0.5,0.5);
-    }
-}
 .search-box{
     height: 30px;
     width: 400px;
@@ -260,13 +252,22 @@ html{
 }
 
 @media(max-width:600px){
+
+    #search_icon{
+        width: 46px;
+        height: 42px;
+        background: url(sprite_image.png) no-repeat;
+        background-position: -940px -612px;
+        zoom: 0.55;
+        -moz-transform: scale(0.5,0.5);
+    }
     .input-search{
         height: 30px;
         width: 30px;
         border-style: none;
         padding-left: 50px;
         outline: none;
-        background: black;
+        background: transparent;
     }
 }
 .btn-search{
@@ -288,7 +289,7 @@ html{
     }
     .search-box{
         height: 30px;
-        width: 410px;
+        width: 100%;
         position: absolute;
         left: -10px;
         background: transparent;
@@ -297,6 +298,7 @@ html{
     .btn-search:focus .search-box{
         z-index: 1;
         background: black;
+        color: #000;
     }
 
     .btn-search{
@@ -306,20 +308,20 @@ html{
         outline: none;
         cursor: pointer;
         left: 45%;
-        background: transparent;
+        background: black;
         z-index: 1;
     }
 
-    .btn-search:focus ~ .input-search{
-        width: 80%;
-        background-color: transparent;
-        position: absolute;
-        left: 0;
+    .btn-search:focus #search_icon{
+        background-color: #000;
+        z-index: 99;
     }
 
-    .btn-search:focus{
-        background-color: transparent;
-    }
+  /*  .btn-search:focus #bell_image{
+        display: none;
+    }*/
+
+    
 }
 
 .btn-search:focus ~ .input-search{
@@ -327,11 +329,28 @@ html{
     background-color: white;
     margin-left: 60px;  
 }
+@media(max-width:600px){
+    .head-wrap{
+        position: relative;
+    }
+    .btn-search:focus ~ .input-search{
+        width: 85%;
+        background: black;
+        position: absolute;
+        left: -10px;
+        z-index: 1;
+    }
+}
+
 .btn-search:focus{
     left: 10px;
     background-color: white;
 }
-
+@media(max-width:600px){
+    .btn-search:focus{
+        background-color: black;
+    }
+}
 
 
 /*Navbar first*/
