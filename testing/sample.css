@@ -41,7 +41,8 @@ html{
    .head1-right .head1-right-container .right-content1 .cross-pat,
    .head1-right .head1-right-container .right-content1 .rect-pat,
    .main-content-right, .header .head-wrap .social_image .upload_image,
-   .header .head-wrap .social_image .search-box .input-search, .header .head-wrap .social_image #upload_image{
+   .header .head-wrap .social_image .search-box .input-search, .header .head-wrap .social_image #upload_image,
+   .main-content .main-container .main-content-left .img3-head, .main-content .main-container .main-content-left .img3-set{
     display: none;
    }
 
@@ -869,12 +870,7 @@ html{
     }
     }
 
-    @media(max-width:600px) {
-        .main-content .main-container .main-content-left .img3-head{
-            height: 33px;
-            padding-left: 15px;
-        }
-        }
+   
     .main-content .main-container .main-content-left .img2-head .first-line{
         font-size: 18px;
         gap: 5px;
