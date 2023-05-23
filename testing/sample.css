@@ -267,6 +267,7 @@ html{
         padding-left: 50px;
         outline: none;
         background: transparent;
+        transition: all .5s ease-in-out;
     }
 }
 .btn-search{
@@ -292,12 +293,14 @@ html{
         position: absolute;
         left: -10px;
         background: transparent;
+        transition: all .1s ease-in-out;
     }
 
     .btn-search:focus .search-box{
         z-index: 1;
         background: black;
         color: #000;
+        transition: all .1s ease-in-out;
     }
 
     .btn-search{
@@ -306,14 +309,16 @@ html{
         border-style: none;
         outline: none;
         cursor: pointer;
-        left: 45%;
+        left: 50%;
         background: black;
         z-index: 1;
+        transition: all .5s ease-in-out;
     }
 
     .btn-search:focus #search_icon{
         background-color: #000;
         z-index: 99;
+        transition: all .5s ease-in-out;
     }
 
   /*  .btn-search:focus #bell_image{
@@ -377,7 +382,7 @@ html{
     }
     .search-box .close{
         position: absolute;
-        right: 15px;
+        right: 40px;
         top: 15px;
         opacity: 0;
     }
@@ -385,6 +390,7 @@ html{
     .btn-search:focus ~ .close{
         opacity: 1;
         transition: linear .5s;
+        z-index: 1;
     }
 
 }
