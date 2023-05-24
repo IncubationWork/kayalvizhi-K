@@ -853,6 +853,12 @@ html{
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
         padding-right: 55px;
     }
+    @media(max-width:600px) {
+        .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
+            padding-right: 0;
+        }
+    }
+
     #small-arrow{
         width: 50px;
         height: 42px;
