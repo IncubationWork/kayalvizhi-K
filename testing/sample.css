@@ -832,6 +832,20 @@ html{
     }
 
    @media(max-width:600px) {
+
+    .main-content .main-container .main-content-left .head1 .head1-right{
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        position: relative;
+    }
+
+    .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container{
+        height: 24px;
+        width: 75%;
+        position: absolute;
+        right: -15px;
+    }
         .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1{
             justify-content: end;
         }
