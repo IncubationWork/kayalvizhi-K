@@ -34,14 +34,14 @@ html{
 
    .navbar, .main-content-left .img1-head, .main-content-left .img1-set, .main-content-left .img1-foot,
    .head1-right .head1-right-container .right-content1 .left1-text,
-   .head1-right .head1-right-container .right-content1 .right1-text,
-   .head1-right .head1-right-container .right-content1 #small-tri,
    .head1-right .head1-right-container .right-content1 .square-pat,
    .head1-right .head1-right-container .right-content1 .cross-pat,
    .head1-right .head1-right-container .right-content1 .rect-pat,
    .main-content-right, .header .head-wrap .social_image .upload_image,
     .header .head-wrap .social_image #upload_image,
-   .main-content .main-container .main-content-left .img3-head, .main-content .main-container .main-content-left .img3-set{
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .left-text,
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 #small-tri,
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .right-text{
     display: none;
    }
 
@@ -210,7 +210,7 @@ html{
         padding-right: 55px;
         margin-right: 55px;
         position: absolute;
-        left: 88%;
+        left: 92%;
     }
 }
 
@@ -293,7 +293,6 @@ html{
         position: absolute;
         left: -10px;
         background: transparent;
-        transition: all .1s ease-in-out;
     }
 
     .btn-search:focus .search-box{
@@ -309,7 +308,7 @@ html{
         border-style: none;
         outline: none;
         cursor: pointer;
-        left: 50%;
+        left: 61%;
         background: black;
         z-index: 1;
         transition: all .5s ease-in-out;
@@ -779,8 +778,27 @@ html{
         width: 100%;
         align-items: center;
         font-size: 15px;
-        opacity: 0.5;
         cursor: pointer;
+    }
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .left-text,
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 #small-tri,
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .right-text{
+        opacity: 0.5;
+    }
+
+
+
+
+    .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .extra a{
+        font-size: 16px;
+        color: rgb(57, 128, 156);
+        visibility: hidden;
+    }
+    @media(max-width:600px) {
+        .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .extra a{
+            visibility: visible;
+            opacity: 1;
+        }
     }
     .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .right-text{
         padding-left: 35px;
@@ -799,6 +817,7 @@ html{
         width: 50%;
         align-items: center;
     }
+
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container{
         height: 24px;
         width: 100%;
@@ -812,8 +831,8 @@ html{
         cursor: pointer;
     }
 
-    @media(max-width:600px) {
-        .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-arrow{
+   @media(max-width:600px) {
+        .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1{
             justify-content: end;
         }
     }
@@ -823,6 +842,13 @@ html{
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 .right1-text{
         padding-left: 35px;
         color: #929292;
+    }
+
+    @media(max-width:600px) {
+        .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 .right1-text{
+            padding-left: 10px;
+            color: #929292;
+        }
     }
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
         padding-right: 55px;
@@ -969,6 +995,13 @@ html{
         padding-left: 15px;
     }
     }
+
+    @media(max-width:600px) {
+        .main-content .main-container .main-content-left .img3-head{
+            height: 45px;
+            padding-left: 15px;
+        }
+        }
 
    
     .main-content .main-container .main-content-left .img2-head .first-line{
@@ -1234,8 +1267,8 @@ html{
 
     .main-content .main-container .main-content-left .img3-set .img3-list img{
         height: 175px;
-        max-width: 30%;
-        min-width: 10%;
+        max-width: 100%;
+        /*min-width: 10%;*/
         cursor: pointer;
         flex-grow: 1;
     }
