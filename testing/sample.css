@@ -128,7 +128,7 @@ html{
 }
 .navbar{
     position: absolute;
-    left: 10%;
+    left: 7.6%;
 }
 
 .navbar a{
@@ -137,9 +137,15 @@ html{
 }
 .social_image{
     width: 600px;
-    justify-content: space-between;
-    padding: 8px 14px;
+    /*justify-content: space-between;
+    padding: 8px 14px;*/
     align-items: center;
+    column-gap: 20px;
+    justify-content: end;
+}
+
+.social_image #upload_image{
+    padding-bottom: 50px;
 }
 @media(max-width:600px){
     .social_image{
@@ -154,7 +160,7 @@ html{
     height: 83px;
     background: url(sprite_image.png) no-repeat;
     background-position: -300px -197px;
-    zoom: 0.15;
+    zoom: 0.13;
     -moz-transform: scale(0.15,0.15);
     cursor: pointer;
 }
@@ -163,7 +169,7 @@ html{
     height: 84px;
     background: url(sprite_image.png) no-repeat;
     background-position: -397px -195px;
-    zoom: 0.15;
+    zoom: 0.13;
     -moz-transform: scale(0.15,0.15);
     cursor: pointer;
 }
@@ -172,7 +178,7 @@ html{
     height: 100px;
     background: url(sprite_image.png) no-repeat;
     background-position: 0px -464px;
-    zoom: 0.23;
+    zoom: 0.229;
     -moz-transform: scale(0.23,0.23);
     cursor: pointer;
 }
@@ -199,9 +205,9 @@ html{
 }
 
 .action .profile img{
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
+    height: 31px;
+    width: 33px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -672,7 +678,7 @@ html{
     right: 0;   
 }
 .color-box .advanced .adv-text{
-    font-size: 14px;
+    font-size: 13.7px;
     opacity: 0.5;
 }
 #adv-img{
@@ -777,7 +783,7 @@ html{
         height: 24px;
         width: 100%;
         align-items: center;
-        font-size: 15px;
+        font-size: 13.5px;
         cursor: pointer;
     }
     .main-content .main-container .main-content-left .head1 .head1-left .head1-left-container .left-content1 .left-text,
@@ -825,7 +831,7 @@ html{
     .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1{
         height: 24px;
         width: 100%;
-        font-size: 15px;
+        font-size: 13.5px;
         justify-content: right;
         align-items: center;
         cursor: pointer;
@@ -936,7 +942,7 @@ html{
         position: relative;
     }
     .main-content .main-container .main-content-left .img1-head .first-line{
-        font-size: 18px;
+        font-size: 17px;
     }
     .main-content .main-container .main-content-left .img1-head .second-line{
         position: absolute;
@@ -1030,12 +1036,12 @@ html{
 
    
     .main-content .main-container .main-content-left .img2-head .first-line{
-        font-size: 18px;
+        font-size: 17px;
         gap: 5px;
     }
 
     .main-content .main-container .main-content-left .img3-head .first-line{
-        font-size: 18px;
+        font-size: 17px;
         gap: 5px;
     }
     .main-content .main-container .main-content-left .img2-head .first-line .fl-img{
@@ -1571,7 +1577,7 @@ html{
     }
 
     .main-content .main-container .main-content-left .img4-head .first-line{
-        font-size: 18px;
+        font-size: 17px;
         display: flex;
         gap: 5px;
     }
@@ -1661,13 +1667,13 @@ html{
     }
 
     .main-content .main-container .main-content-right .main-container-right .first-right-container .button-bunch div{
-        background-color: rgb(194, 198, 200);
+        background-color: #cfd6d9;
         padding-bottom: 1.5%;
         padding-left: 5%;
         padding-right: 5%;
         padding-top: 1.5%;
         border-radius: 5px;
-        opacity: 0.7;
+        opacity: 0.8;
     }
     
     .main-content .main-container .main-content-right .main-container-right .first-right-container .button-bunch div:hover{
@@ -1722,10 +1728,10 @@ html{
         align-items: center;   
     }
     .main-content .main-container .main-content-right .main-container-right .second-right-container .button-bunch .img1-head .second-line{
-        width: 25%;
-        height: 60%;
+        width: 21%;
+        height: 69%;
         border: 2px solid #128fdc;
-        border-radius: 4px;
+        border-radius: 3px;
         margin-left: 2%;
         margin-right: 9%;
         padding-top: 2%;
