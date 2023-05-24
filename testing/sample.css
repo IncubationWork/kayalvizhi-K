@@ -1728,15 +1728,15 @@ html{
         align-items: center;   
     }
     .main-content .main-container .main-content-right .main-container-right .second-right-container .button-bunch .img1-head .second-line{
-        width: 21%;
+        width: 22%;
         height: 69%;
         border: 2px solid #128fdc;
         border-radius: 3px;
         margin-left: 2%;
         margin-right: 9%;
-        padding-top: 2%;
+        padding-top: 7px;
         padding-left: 5%;
-        padding-bottom: 2%;
+        padding-bottom: 2px;
         padding-right: 5%;
         color: #128fdc;
         font-size: 15px;
