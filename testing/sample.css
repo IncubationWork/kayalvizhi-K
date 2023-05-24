@@ -831,6 +831,10 @@ html{
         cursor: pointer;
     }
 
+    .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
+        margin-right: 35px;
+    }
+
    @media(max-width:600px) {
 
     .main-content .main-container .main-content-left .head1 .head1-right{
@@ -844,7 +848,7 @@ html{
         height: 24px;
         width: 75%;
         position: absolute;
-        right: -15px;
+        right: 0;
     }
         .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1{
             justify-content: end;
@@ -870,6 +874,7 @@ html{
     @media(max-width:600px) {
         .main-content .main-container .main-content-left .head1 .head1-right .head1-right-container .right-content1 #small-tri{
             padding-right: 0;
+            margin-right: 0;
         }
     }
 
