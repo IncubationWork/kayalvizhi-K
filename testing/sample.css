@@ -1643,6 +1643,11 @@ html{
     }
 
     /*Right First Container*/
+
+    .main-content .main-container .main-content-right .main-container-right{
+        flex-direction: column;
+        row-gap: 4%;
+    }
     .main-content .main-container .main-content-right .main-container-right .first-right-container{
         background-color: white;
         height: 25%;
@@ -1688,7 +1693,7 @@ html{
     /*Right Second Container*/
     .main-content .main-container .main-content-right .main-container-right .second-right-container{
         background-color: white;
-        margin-top: 10%;
+        /*margin-top: 10%;*/
         height: 45%;
         width: 100%;
         padding: 25px;
@@ -1766,7 +1771,7 @@ html{
     .main-content .main-container .main-content-right .main-container-right .third-right-container{
         width: 100%;
         background-color: white;
-        margin-top: 10%;
+        /*margin-top: 10%;*/
     }
     .main-content .main-container .main-content-right .main-container-right .third-right-container .container-item{
         flex-wrap: wrap;
