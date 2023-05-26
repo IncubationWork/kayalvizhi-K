@@ -745,6 +745,7 @@ html{
         height: 200rem;
         width: 80%;
         margin: 0 auto;
+        column-gap: 3%;
     }
     @media(max-width:600px) {
         .main-content .main-container{
@@ -758,6 +759,7 @@ html{
     .main-content .main-container .main-content-left{
         height: 200rem;
         width: 77%;
+        flex-direction: column;
     }
 
     @media(max-width:600px) {
@@ -1631,7 +1633,7 @@ html{
         height: 200rem;
         width: 23%;
         margin-top: 40px;
-        margin-left: 40px;
+        /*margin-left: 40px;*/
     }
     
     .main-content .main-container .main-content-right .main-container-right{
