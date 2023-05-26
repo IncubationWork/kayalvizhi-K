@@ -1699,6 +1699,7 @@ html{
         height: 45%;
         width: 100%;
         padding: 25px;
+        flex-direction: column;
     }
 
     .main-content .main-container .main-content-right .main-container-right .second-right-container .heading{
@@ -1740,16 +1741,16 @@ html{
         align-items: center;   
     }
     .main-content .main-container .main-content-right .main-container-right .second-right-container .button-bunch .img1-head .second-line{
-        width: 22%;
-        height: 69%;
+        width: 65px;
+        height: 35px;
         border: 2px solid #128fdc;
         border-radius: 3px;
-        margin-left: 2%;
-        margin-right: 9%;
+        /*margin-left: 2%;
+        margin-right: 9%;*/
         padding-top: 7px;
-        padding-left: 5%;
+        padding-left: 15px;
         padding-bottom: 2px;
-        padding-right: 5%;
+        padding-right: 15px;
         color: #128fdc;
         font-size: 15px;
         font-family: "Proxima Nova", "helvetica neue", helvetica, arial, sans-serif;
