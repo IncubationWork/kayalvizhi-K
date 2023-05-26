@@ -1,18 +1,103 @@
 *{
     margin: 0;
     padding: 0;
-    
+    border: none;
+    outline: none;
 }
-
 .contaier{
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(30deg, #FFCC33, #7BB662);
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 100px 130px 100px 100px 50px 1fr; 
     justify-content: center;
-    align-items: center;
-    flex-direction: column;   
+}
+/*Heading*/
+.contaier .heading{
+    grid-column: 1/3;
+    grid-row: 2;
+    /*row-gap: 50px;*/
+}
+.contaier .heading h1{
+    color: #ffb833;
+    font-size: 46px;
+    font-weight: 600;
+    text-shadow: 1px 1px #000;
+    padding-bottom: 10px;
+}
+.contaier .heading p{
+    font-size: 20px;
+}
+/*Numbers*/
+.contaier .start-num{
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+label{
+    font-size: 20px;
 }
 
+input{
+    height: 26px;
+    width: 90%;
+    padding-left: 20px;
+}
+.contaier .end-num{
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+label
+/*Task*/
+.fizz-task{
+    grid-column: 1;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
 
-
+.fizz-task1{
+    grid-column: 1;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.contaier .buzz-task{
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.contaier .button-output{
+    grid-column: 1/3;
+    grid-row: 5;
+    display: flex;
+    justify-content: end;
+    align-items: self-end;
+    flex-direction: column;
+}
+.button-output button{
+    height: 70px;
+    width: 80px;
+    font-size: 16px;
+    font-weight: 600;
+    background: red;
+    color: #fff;
+    margin-right: 5%;
+    border-radius: 5px;
+}
+.contaier .result{
+    grid-column: 1/3;
+    grid-row: 6;
+    display: flex;
+    flex-direction: column;
+}
