@@ -979,13 +979,17 @@ html{
         height: 133px;
         width: 12%;
         font-size: 100%;
-        padding: 5.2% 2%;
+        /*padding: 5.2% 2%;*/
         margin: 0;
         color: white;
         background-color: hsla(0, 0%, 0%, 0.64);
         margin-left: -12.5%;
         position: absolute;
         right: 0;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     }
     /*First Image Foot*/
     .main-content .main-container .main-content-left .img1-foot{
