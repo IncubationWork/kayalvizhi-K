@@ -48,7 +48,7 @@ const addTask = () => {
                 if (!(e.target.className == "edit")){
                     targetElement = e.target.parentElement;
                 }
-                newTaskInput.value = targetElement.previousElementSibling?.innerText;
+                newTaskInput.value = targetElement.previousElementSibling.innerText;
                 targetElement.parentNode.remove();
                 taskCount -= 1;
                 displayCount(taskCount);
