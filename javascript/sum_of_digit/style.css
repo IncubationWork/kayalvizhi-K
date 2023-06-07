@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    height: 100wh;
+    width: 100vw;
+    padding: 0;
+  }
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+    background: #009b9e;
+    z-index: 1;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+  }
+
+  #entry-text {
+    width: 40rem;
+    margin: 2rem auto;
+    max-width: 80%;
+    padding: 1rem;
+  }
+
+  label {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #464646;
+  }
+  
+  input {
+    font: inherit;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.2rem;
+    color: #383838;
+    width: 30%;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: none;
+    background: #fff1c4;
+  }
+
+.btn{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #009b9e;
+    background: #009b9e;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    margin: 0 0.5rem;
+    width: 150px;
+  }
+
+  .clear{
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #009b9e;
+    background: #009b9e;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    margin: 0 0.5rem;
+    width: 100px;
+  }
+
+  .btn:hover,
+  .btn:active {
+    background: #f67722;
+    border-color: #f67722;
+  }
+
+  .modal .modal__actions {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    top: 30vh;
+    left: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+
+  .modal .modal__content, .modal .result {
+    padding: 1rem;
+  }
+
+  .modal .result {
+    display: none;
+  }
+  
+  .modal .modal__actions {
+    padding: 1rem;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+  }
+
+  #add-modal .modal__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .modal {
+      width: 40rem;
+      left: calc(50% - 20rem);
+    }
+  }
