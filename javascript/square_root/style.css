@@ -35,6 +35,7 @@ header {
     font-weight: bold;
     margin: 0.5rem 0;
     color: #464646;
+    width: 80%;
   }
   
   input {
@@ -42,7 +43,7 @@ header {
     border: 1px solid #ccc;
     padding: 0.4rem 0.2rem;
     color: #383838;
-    width: 30%;
+    width: 95%;
     box-sizing: border-box;
   }
   
@@ -95,7 +96,7 @@ header {
     border-radius: 10px;
     width: 80%;
     top: 30vh;
-    left: 50%;
+    left: 30%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   }
 
@@ -110,18 +111,40 @@ header {
   .modal .modal__actions {
     padding: 1rem;
     display: flex;
-    width: 600px;
+    width: 95%;
     justify-content: space-between;
+  }
+  #add-modal{
+    width: 35%;
   }
 
   #add-modal .modal__content {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .modal {
       width: 40rem;
       left: calc(50% - 20rem);
     }
+    #add-modal{
+      width: 80%;
+    }
+    .modal {
+      position: fixed;
+      background: white;
+      border-radius: 10px;
+      width: 30%;
+      top: 30vh;
+      left: 10%;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 26%);
+  }
+  .eligible {
+    width: 100px;
+    height: 30px;
+    margin-left: 35%;
+    display: none;
+   }
   }
