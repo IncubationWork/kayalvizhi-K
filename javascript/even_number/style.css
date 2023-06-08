@@ -133,7 +133,6 @@ header {
       width: 80%;
     }
     .modal {
-      position: fixed;
       background: white;
       border-radius: 10px;
       width: 30%;
@@ -147,4 +146,7 @@ header {
     margin-left: 35%;
     display: none;
    }
+   header h1 {
+    font-size: 1.3rem;
+}
   }
