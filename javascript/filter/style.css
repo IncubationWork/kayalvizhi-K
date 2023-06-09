@@ -207,6 +207,11 @@
     display: flex;
     justify-content: space-between;
   }
+  @media(max-width: 700) {
+    #entry-text {
+      flex-wrap: wrap;
+    }
+  }
   
   #entry-text p {
     font-size: 1.5rem;
