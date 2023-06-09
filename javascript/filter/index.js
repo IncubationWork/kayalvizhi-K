@@ -27,7 +27,7 @@ const renderNewMovieElement = (id, title, imageUrl, rating) => {
     newMovieElement.setAttribute('id','movie-element');
     newMovieElement.innerHTML = `
       <div class="movie-element__image">
-        <img src="images/${imageUrl}" alt="${title}">
+        <img src="${imageUrl}" alt="${title}">
       </div>
       <div class="movie-element__info">
         <h2>${title}</h2>
@@ -41,6 +41,12 @@ const renderNewMovieElement = (id, title, imageUrl, rating) => {
   const showMovieModal = () => {
     addMovieModal.classList.add('visible');
     toggleBackdrop();
+  };
+
+  const cancelAddMovieHandler = () => {
+    closeMovieModal();
+    toggleBackdrop();
+    clearMovieInput();
   };
 
 
@@ -77,7 +83,8 @@ const addMovieHandler = () => {
       newMovie.image,
       newMovie.rating
     );
-    //updateUI();
   };
+
   startAddMovieButton.addEventListener('click', showMovieModal);
   confirmAddMovieButton.addEventListener('click', addMovieHandler);
+  cancelAddMovieButton.addEventListener('click', cancelAddMovieHandler);

@@ -220,7 +220,12 @@
     margin: 1rem auto;
     padding: 0;
   }
-  
+  main h3 {
+    width: 40rem;
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 0;
+  }
   #backdrop {
     position: fixed;
     width: 100%;
