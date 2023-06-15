@@ -9,15 +9,17 @@
 </head>
 <body>
     <div class="hero">
-        <div class="highway anim-highway"></div>
-        <div class="city anim-city"></div>
-        <div class="car" >
-            <img src="images/car.png" class="anim_car">
+        <div class="highway"></div>
+        <div class="city"></div>
+            <div class="car a-slide" id="car" data-animation="stop">
+                
+            </div>
+        <div class="station">
+            <div class="toll-gate"></div>
+            <button id="control">Start</button>
         </div>
-        <div class="wheel">
-            <img src="images/wheel.png" class="back-wheel anim-wheel">
-            <img src="images/wheel.png" class="front-wheel anim-wheel">
         </div>
-    </div>
+        <script src="add_car.js"></script>
+        <script src="animate_car.js"></script>
 </body>
 </html>

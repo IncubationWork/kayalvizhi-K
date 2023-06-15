@@ -42,51 +42,73 @@
     z-index: 1;
     background-repeat: repeat-x;
 }
+.car-num{
+    background: #fff;
+    width: 85px;
+    height: 18px;
+    padding: 1%;
+    border-radius: 5px;
+    border: none;
+}
+.toll-gate{
+    height: 50px;
+    width: 19%;
+    background-image: url(images/vertical_tg.png);
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    z-index: 2;
+    transform: rotate(90deg);
+}
 .anim-city{
     animation: city 20s linear infinite;
 }
+ul{
+    list-style: none;
+}
 .car{
-    width: 300px;
-    left: 30%;
-    bottom: 100px;
+    --w:230px
+    width: var(var(--w));
+    left: 5%;
+    bottom: 170px;
     transform: translateX(-50%);
     position: absolute;
     z-index: 2;
+}
+#control{
+    background: black;
+    color: #fff;
+    width: 55px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.1%;
+    left: 48%;
+    bottom: 100px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
 }
 .car img{
     width: 100%;   
 }
-.anim_car{
-    animation: car 1s linear infinite;
-}
-@keyframes car {
-    100%{transform: translateY(-1px);}
-    50%{transform: translateY(1px);}
-    0%{transform: translateY(-1px);}
-}
-.wheel{
-    left: 30%;
-    bottom: 158px;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 2;
-}
-.wheel img{
-    width: 50px;
-    height: 50px;
-}
-.anim-wheel{
-    animation: wheel 1s linear infinite;
-}
 
-.back-wheel{
-    left: -122px;
-    position: absolute;
-}
-.front-wheel{
-    left: 62px;
-    position: absolute;
-}
-@keyframes wheel {
-    100%{transform: rotate(360deg);}
-}
+
+  /*stop car*/
+  .a-slide {
+    --animdur: 15s;
+    --animn: slide;
+    --animic: 1
+  }
+  [data-animation] {
+    animation: var(--animn, none) var(--animdur, 0s) 
+    var(--animtf, linear) var(--animdel, 0s) 
+    var(--animic, infinite) var(--animdir, alternate) 
+    var(--animfm, none) var(--animps, running);
+  }
+
+  /* KEYFRAMES */
+ 
+  @keyframes slide {
+    from {left: 0%; }
+    to {left: 110% }
+  }
