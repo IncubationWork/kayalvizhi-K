@@ -24,15 +24,16 @@ jstoggle.addEventListener('click', () => {
   })
   if(jstoggle.textContent === "Start"){
     jstoggle.textContent = "Stop";  
-    console.log(carContainer.offsetLeft); 
 } else {
     jstoggle.textContent = "Start";
-    console.log(carContainer.offsetLeft);
 }
 });
  
 const positionCar = carContainer.offsetLeft;
 
-if(positionCar === 1096){
+setInterval(() => {
+    console.log(positionCar);
+if(positionCar === 100){
     carContainer.style.display = 'none';
 }
+},600);
