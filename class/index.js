@@ -42,5 +42,9 @@ console.log(a.place);
 let checkPrototype = (a.prototype === b.prototype);
 console.log(checkPrototype);
 
+let checkClassPrototype = (a.__proto__ === Employee.prototype);
+console.log(checkClassPrototype);
 
+let checkClassPrototype1 = (a.prototype === Employee.prototype);
+console.log(checkClassPrototype1);
 
