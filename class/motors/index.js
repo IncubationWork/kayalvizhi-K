@@ -76,7 +76,7 @@ class Bike extends Motor {
         if(this.speed === 0) {
             bikeDetails.innerHTML = "Now the vehicle is not moving, Kindly release the brake";
         } else {
-            bikeDetails.innerHTML = "Now the " +this.name + " car speed is reduced to : " + this.setBrake() + " km/hrs"; 
+            bikeDetails.innerHTML = "Now the " +this.name + " bike speed is reduced to : " + this.setBrake() + " km/hrs"; 
         }
     }
 
@@ -107,7 +107,7 @@ class Bus extends Motor {
         if(this.speed === 0) {
             busDetails.innerHTML = "Now the vehicle is not moving, Kindly release the brake";
         } else {
-            busDetails.innerHTML = "Now the " +this.name + " car speed is reduced to : " + this.setBrake() + " km/hrs"; 
+            busDetails.innerHTML = "Now the " +this.name + " bus speed is reduced to : " + this.setBrake() + " km/hrs"; 
         } 
     }
 
