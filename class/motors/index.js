@@ -38,8 +38,11 @@ class Car extends Motor {
         this.speed = speed;
     }
     getAcceleration() {
-        let textContent = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs";
-        carDetails.innerHTML = textContent;
+        if(this.speed >= 250) {
+            carDetails.innerHTML = "Maximum speed Reached.";
+        } else {
+            carDetails.innerHTML = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs"; 
+        }
     }
     getBrake() {
         if(this.speed === 0) {
@@ -69,8 +72,11 @@ class Bike extends Motor {
         this.speed = speed;
     }
     getAcceleration() {
-        let textContent = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs";
-        bikeDetails.innerHTML = textContent;
+        if(this.speed >= 110) {
+            bikeDetails.innerHTML = "Maximum speed Reached.";
+        } else {
+            bikeDetails.innerHTML = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs"; 
+        }
     }
     getBrake() {
         if(this.speed === 0) {
@@ -100,8 +106,11 @@ class Bus extends Motor {
         this.speed = speed;
     }
     getAcceleration() {
-        let textContent = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs";
-        busDetails.innerHTML = textContent;
+        if(this.speed >= 120) {
+            busDetails.innerHTML = "Maximum speed Reached.";
+        } else {
+            busDetails.innerHTML = this.name + " Current speed increased into : " + this.setAcceleration() + " km/hrs"; 
+        } 
     }
     getBrake() {
         if(this.speed === 0) {
