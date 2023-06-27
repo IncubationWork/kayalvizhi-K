@@ -31,6 +31,11 @@ h2 {
     text-align: center;
     font-size: 4rem;
 }
+.car_details, .bike_details, .bus_details{
+    font-size: 20px;
+    font-weight: 500;
+    color: green;
+}
 
 button {
     padding: 10px 20px;
@@ -71,4 +76,3 @@ p {
     }
 }
     
-}
