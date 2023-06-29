@@ -54,8 +54,9 @@ class UI {
                 </div>
                 <h3>${product.title}</h3>
                 <h4>Author: ${product.author}</h4>
-                <h4 class="qty">Quantity: ${product.quantity}</h4>
-                <h4>Rs.${product.price}</h4>
+                <h4>Quantity: <span class="qty" data-id=${product.id}>${product.quantity}</span></h4>
+                <h4>Rs.${product.price}</h4> 
+                <span id="soldout" class="soldout dis" data-id=${product.id}>Sold Out</span>
             </article>
             `;
         });
@@ -175,13 +176,55 @@ class UI {
             }
         })
     }
+    updateProductQtyInHtml(prodID, quantity) {
+        const productsQuantity = document.querySelectorAll(".qty");
+        productsQuantity.forEach((qtyElement) => {
+            const elementProductId = qtyElement.getAttribute('data-id');
+            if(elementProductId === prodID) {
+                qtyElement.textContent = quantity;
+            }
+        })
+    }
+
+    //get cart quantity details
+    cartQuantityDetails() {
+        //Reduce quantity from product
+        let productItems = JSON.parse(localStorage.getItem("products"));
+        const soldOut = document.querySelectorAll("#soldout");
+        
+        cart.forEach((cartItem) => {
+            const {id, amount} = cartItem;
+            const productIndex = productItems.findIndex(product => product.id === id);
+        
+            if(productIndex !== -1) {
+                productItems[productIndex].quantity = productItems[productIndex].quantity - amount;
+
+                //check if the product is available
+                if (productItems[productIndex].quantity === 0) {
+                    soldOut.forEach((soldElement) => {
+                        const elementProductId = soldElement.getAttribute('data-id');
+                        if(elementProductId === productItems[productIndex].id) {
+                            soldElement.style.display = "block";
+                        }
+                    })
+                }
+
+                //modify quantity in html
+                this.updateProductQtyInHtml(productItems[productIndex].id,productItems[productIndex].quantity);
+                Storage.saveProducts(productItems);
+            }
+        });
+    }
+
     clearCart(){
+        this.cartQuantityDetails();
+        //remove item from cart
         let cartItems = cart.map(item => item.id);
         cartItems.forEach((id) => {
-            this.reduceQuantity(id);
             this.removeItem(id);
         });
-        cartContent.innerHTML = '';   
+        cartContent.innerHTML = '';  
+
     }
     removeItem(id){
         cart = cart.filter(item => item.id !== id);
@@ -194,14 +237,14 @@ class UI {
     getSingleButton(id) {
         return buttonDOM.find(button => button.dataset.id === id);
     }
-    reduceQuantity(id){
+    /*reduceQuantity(id){
         let tempQty = 0;
         let productItem = Storage.getProduct(id);
         cart.map(item => {
            console.log(item.amount);
         });
         console.log(productItem.quantity);
-    }
+    }*/
 }
 //local storage
 class Storage{
@@ -234,6 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ui.cartLogic();
     });
 });
+
 
 //add or subtract quantity based on cart
 //display sold out if the quantity is zero

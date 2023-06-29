@@ -266,3 +266,28 @@ body{
   }
   
   /* --------------- End of Cart ---------------- */
+a {
+  text-decoration: none;
+  color: #222;
+}
+.product {
+  position: relative;
+}
+
+.product .soldout {
+  position: absolute;
+  bottom: 150px;
+  right: 10px;
+  color: red;
+  font-size: 25px;
+  font-weight: 700;
+  border: 5px solid red;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  transform: rotate(-35deg);
+}
+
+.dis {
+  display: none;
+}
