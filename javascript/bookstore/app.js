@@ -152,6 +152,8 @@ class UI {
             if(event.target.classList.contains("remove-item"))
             {
                 let removeItem = event.target;
+                //let error = event.target.parentElement.parentElement.nextElementSibling;
+                //error.classList.add('dis');
                 let id = removeItem.dataset.id;
                 console.log(id);
                 cartContent.removeChild(removeItem.parentElement.parentElement);
@@ -173,6 +175,11 @@ class UI {
                             error.classList.remove('dis');
                             error.innerText = `! Only ${quantity} item(s) left.`;
                             tempItem.amount = tempItem.amount;
+
+                            const displayDuration = 2000;
+                            setTimeout(() => {
+                                error.classList.add('dis');
+                            }, displayDuration)
                         }
                     } 
                 })
@@ -182,8 +189,8 @@ class UI {
             } else if (event.target.classList.contains("fa-chevron-down")){
                 let lowerAmount = event.target;
                 
-                let error = event.target.parentElement.parentElement.nextElementSibling;
-                error.classList.add('dis');
+                //let error = event.target.parentElement.parentElement.nextElementSibling;
+                //error.classList.add('dis');
                 let id = lowerAmount.dataset.id;
                 
                 let tempItem = cart.find(item => item.id === id);
