@@ -116,6 +116,7 @@ class UI {
             <p class="item-amount">${item.amount}</p>
             <i class="fas fa-chevron-down" data-id=${item.id}></i>
         </div>
+        <p class="error"></p>
         `;
         cartContent.appendChild(div);
   
@@ -154,9 +155,22 @@ class UI {
                 this.removeItem(id);
             } else if (event.target.classList.contains("fa-chevron-up")){
                 let addAmount = event.target;
+                console.log(event.target);
                 let id = addAmount.dataset.id;
                 let tempItem = cart.find(item => item.id === id);
-                tempItem.amount = tempItem.amount + 1;
+
+                //get product quantity from localStorage
+                let productItems = JSON.parse(localStorage.getItem("products"));
+                productItems.forEach((prodItem) => {
+                    if(prodItem.id === id) {
+                        const {quantity} = prodItem;
+                        if(tempItem.amount < quantity) {
+                            tempItem.amount = tempItem.amount + 1;
+                        } else {
+                            console.log("Item sold out");
+                        }
+                    } 
+                })
                 Storage.saveCart(cart);
                 this.setCartValues(cart);
                 addAmount.nextElementSibling.innerText = tempItem.amount;
@@ -206,7 +220,7 @@ class UI {
                         const elementProductId = soldElement.getAttribute('data-id');
                         if(elementProductId === productItems[productIndex].id) {
                             soldElement.style.display = "block";
-                            //get corresponding button
+                            //get corresponding button & disable add cart button
                             btn.forEach((btnElement) => {
                                 const btnProdId = btnElement.getAttribute('data-id');
                                 if(btnProdId === productItems[productIndex].id) {
@@ -215,9 +229,6 @@ class UI {
                             })
                         }
                     })
-
-                    //disable add cart button
-
                 }
 
                 //modify quantity in html
@@ -248,14 +259,6 @@ class UI {
     getSingleButton(id) {
         return buttonDOM.find(button => button.dataset.id === id);
     }
-    /*reduceQuantity(id){
-        let tempQty = 0;
-        let productItem = Storage.getProduct(id);
-        cart.map(item => {
-           console.log(item.amount);
-        });
-        console.log(productItem.quantity);
-    }*/
 }
 //local storage
 class Storage{
