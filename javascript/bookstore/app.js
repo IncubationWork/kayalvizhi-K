@@ -116,9 +116,12 @@ class UI {
             <p class="item-amount">${item.amount}</p>
             <i class="fas fa-chevron-down" data-id=${item.id}></i>
         </div>
-        <p class="error"></p>
         `;
         cartContent.appendChild(div);
+        const p = document.createElement('p');
+        p.classList.add('error');
+        p.classList.add('dis');
+        cartContent.appendChild(p);
   
     }
     showCart() {
@@ -155,10 +158,10 @@ class UI {
                 this.removeItem(id);
             } else if (event.target.classList.contains("fa-chevron-up")){
                 let addAmount = event.target;
-                console.log(event.target);
+                let error = event.target.parentElement.parentElement.nextElementSibling;
                 let id = addAmount.dataset.id;
                 let tempItem = cart.find(item => item.id === id);
-
+            
                 //get product quantity from localStorage
                 let productItems = JSON.parse(localStorage.getItem("products"));
                 productItems.forEach((prodItem) => {
@@ -167,7 +170,9 @@ class UI {
                         if(tempItem.amount < quantity) {
                             tempItem.amount = tempItem.amount + 1;
                         } else {
-                            console.log("Item sold out");
+                            error.classList.remove('dis');
+                            error.innerText = `! Only ${quantity} item(s) left.`;
+                            tempItem.amount = tempItem.amount;
                         }
                     } 
                 })
@@ -176,13 +181,19 @@ class UI {
                 addAmount.nextElementSibling.innerText = tempItem.amount;
             } else if (event.target.classList.contains("fa-chevron-down")){
                 let lowerAmount = event.target;
+                
+                let error = event.target.parentElement.parentElement.nextElementSibling;
+                error.classList.add('dis');
                 let id = lowerAmount.dataset.id;
+                
                 let tempItem = cart.find(item => item.id === id);
                 tempItem.amount = tempItem.amount - 1;
+            
                 if(tempItem.amount > 0){
                     Storage.saveCart(cart);
                     this.setCartValues(cart);
-                    lowerAmount.previouElementSibling.innerText = tempItem.amount;
+                    lowerAmount.parentElement.firstElementChild.nextElementSibling.textContent =tempItem.amount;
+                    //lowerAmount.previouElementSibling.textContent = tempItem.amount;
                 } else {
                     cartContent.removeChild(lowerAmount.parentElement.parentElement);
                     this.removeItem(id);
