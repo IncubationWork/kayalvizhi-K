@@ -191,6 +191,7 @@ class UI {
         //Reduce quantity from product
         let productItems = JSON.parse(localStorage.getItem("products"));
         const soldOut = document.querySelectorAll("#soldout");
+        const btn = document.querySelectorAll(".bag-btn");
         
         cart.forEach((cartItem) => {
             const {id, amount} = cartItem;
@@ -205,8 +206,18 @@ class UI {
                         const elementProductId = soldElement.getAttribute('data-id');
                         if(elementProductId === productItems[productIndex].id) {
                             soldElement.style.display = "block";
+                            //get corresponding button
+                            btn.forEach((btnElement) => {
+                                const btnProdId = btnElement.getAttribute('data-id');
+                                if(btnProdId === productItems[productIndex].id) {
+                                    btnElement.style.display = "none";
+                                }
+                            })
                         }
                     })
+
+                    //disable add cart button
+
                 }
 
                 //modify quantity in html
