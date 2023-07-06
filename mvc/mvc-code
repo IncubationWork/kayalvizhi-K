@@ -1,0 +1,434 @@
+				app.js
+				
+import Controller from './controller';
+import {$on} from './helpers';
+import Template from './template';
+import Store from './store';
+import View from './view';
+
+const store = new Store('todos-vanilla-es6');
+
+const template = new Template();
+const view = new View(template);
+
+const controller = new Controller(store, view);
+
+const setView = () => controller.setView(document.location.hash);
+$on(window, 'load', setView);
+$on(window, 'hashchange', setView);
+
+					controller.js
+					
+import {emptyItemQuery} from './item';
+import Store from './store';
+import View from './view';
+
+export default class Controller {
+	
+	constructor(store, view) {
+		this.store = store;
+		this.view = view;
+
+		view.bindAddItem(this.addItem.bind(this));
+		view.bindEditItemSave(this.editItemSave.bind(this));
+		view.bindEditItemCancel(this.editItemCancel.bind(this));
+		view.bindRemoveItem(this.removeItem.bind(this));
+		view.bindToggleItem((id, completed) => {
+			this.toggleCompleted(id, completed);
+			this._filter();
+		});
+		view.bindRemoveCompleted(this.removeCompletedItems.bind(this));
+		view.bindToggleAll(this.toggleAll.bind(this));
+
+		this._activeRoute = '';
+		this._lastActiveRoute = null;
+	}
+
+	setView(raw) {
+		const route = raw.replace(/^#\//, '');
+		this._activeRoute = route;
+		this._filter();
+		this.view.updateFilterButtons(route);
+	}
+
+	addItem(title) {
+		this.store.insert({
+			id: Date.now(),
+			title,
+			completed: false
+		}, () => {
+			this.view.clearNewTodo();
+			this._filter(true);
+		});
+	}
+
+	editItemSave(id, title) {
+		if (title.length) {
+			this.store.update({id, title}, () => {
+				this.view.editItemDone(id, title);
+			});
+		} else {
+			this.removeItem(id);
+		}
+	}
+
+	editItemCancel(id) {
+		this.store.find({id}, data => {
+			const title = data[0].title;
+			this.view.editItemDone(id, title);
+		});
+	}
+
+	removeItem(id) {
+		this.store.remove({id}, () => {
+			this._filter();
+			this.view.removeItem(id);
+		});
+	}
+
+	removeCompletedItems() {
+		this.store.remove({completed: true}, this._filter.bind(this));
+	}
+
+	toggleCompleted(id, completed) {
+		this.store.update({id, completed}, () => {
+			this.view.setItemComplete(id, completed);
+		});
+	}
+
+	toggleAll(completed) {
+		this.store.find({completed: !completed}, data => {
+			for (let {id} of data) {
+				this.toggleCompleted(id, completed);
+			}
+		});
+
+		this._filter();
+	}
+
+	_filter(force) {
+		const route = this._activeRoute;
+
+		if (force || this._lastActiveRoute !== '' || this._lastActiveRoute !== route) {
+			/* jscs:disable disallowQuotedKeysInObjects */
+			this.store.find({
+				'': emptyItemQuery,
+				'active': {completed: false},
+				'completed': {completed: true}
+			}[route], this.view.showItems.bind(this.view));
+			/* jscs:enable disallowQuotedKeysInObjects */
+		}
+
+		this.store.count((total, active, completed) => {
+			this.view.setItemsLeft(active);
+			this.view.setClearCompletedButtonVisibility(completed);
+
+			this.view.setCompleteAllCheckbox(completed === total);
+			this.view.setMainVisibility(total);
+		});
+
+		this._lastActiveRoute = route;
+	}
+}
+
+				helpers.js
+
+export function qs(selector, scope) {
+	return (scope || document).querySelector(selector);
+}
+
+export function $on(target, type, callback, capture) {
+	target.addEventListener(type, callback, !!capture);
+}
+
+export function $delegate(target, selector, type, handler, capture) {
+	const dispatchEvent = event => {
+		const targetElement = event.target;
+		const potentialElements = target.querySelectorAll(selector);
+		let i = potentialElements.length;
+
+		while (i--) {
+			if (potentialElements[i] === targetElement) {
+				handler.call(targetElement, event);
+				break;
+			}
+		}
+	};
+
+	$on(target, type, dispatchEvent, !!capture);
+}
+
+export const escapeForHTML = s => s.replace(/[&<]/g, c => c === '&' ? '&amp;' : '&lt;');
+
+				item.js
+
+export var Item;
+
+export var ItemList;
+
+const Empty = {
+	Record: {}
+};
+
+export var EmptyItemQuery;
+
+export const emptyItemQuery = Empty.Record;
+
+export var ItemQuery;
+
+export var ItemUpdate;
+
+					store.js
+					
+import {Item, ItemList, ItemQuery, ItemUpdate, emptyItemQuery} from './item';
+
+export default class Store {
+	constructor(name, callback) {
+		const localStorage = window.localStorage;
+		let liveTodos;
+		this.getLocalStorage = () => {
+			return liveTodos || JSON.parse(localStorage.getItem(name) || '[]');
+		};
+		this.setLocalStorage = (todos) => {
+			localStorage.setItem(name, JSON.stringify(liveTodos = todos));
+		};
+
+		if (callback) {
+			callback();
+		}
+	}
+	find(query, callback) {
+		const todos = this.getLocalStorage();
+		let k;
+
+		callback(todos.filter(todo => {
+			for (k in query) {
+				if (query[k] !== todo[k]) {
+					return false;
+				}
+			}
+			return true;
+		}));
+	}
+	update(update, callback) {
+		const id = update.id;
+		const todos = this.getLocalStorage();
+		let i = todos.length;
+		let k;
+
+		while (i--) {
+			if (todos[i].id === id) {
+				for (k in update) {
+					todos[i][k] = update[k];
+				}
+				break;
+			}
+		}
+
+		this.setLocalStorage(todos);
+
+		if (callback) {
+			callback();
+		}
+	}
+	insert(item, callback) {
+		const todos = this.getLocalStorage();
+		todos.push(item);
+		this.setLocalStorage(todos);
+
+		if (callback) {
+			callback();
+		}
+	}
+	remove(query, callback) {
+		let k;
+
+		const todos = this.getLocalStorage().filter(todo => {
+			for (k in query) {
+				if (query[k] !== todo[k]) {
+					return true;
+				}
+			}
+			return false;
+		});
+
+		this.setLocalStorage(todos);
+
+		if (callback) {
+			callback(todos);
+		}
+	}
+	count(callback) {
+		this.find(emptyItemQuery, data => {
+			const total = data.length;
+
+			let i = total;
+			let completed = 0;
+
+			while (i--) {
+				completed += data[i].completed;
+			}
+			callback(total, total - completed, completed);
+		});
+	}
+}
+
+					template.js
+					
+import {ItemList} from './item';
+
+import {escapeForHTML} from './helpers';
+
+export default class Template {
+	itemList(items) {
+		return items.reduce((a, item) => a + `
+<li data-id="${item.id}"${item.completed ? ' class="completed"' : ''}>
+	<div class="view">
+		<input class="toggle" type="checkbox" ${item.completed ? 'checked' : ''}>
+		<label>${escapeForHTML(item.title)}</label>
+		<button class="destroy"></button>
+	</div>
+</li>`, '');
+	}
+	itemCounter(activeTodos) {
+		return `${activeTodos} item${activeTodos !== 1 ? 's' : ''} left`;
+	}
+}
+
+					view.js
+					
+import {ItemList} from './item';
+import {qs, $on, $delegate} from './helpers';
+import Template from './template';
+
+const _itemId = element => parseInt(element.parentNode.dataset.id || element.parentNode.parentNode.dataset.id, 10);
+const ENTER_KEY = 13;
+const ESCAPE_KEY = 27;
+
+export default class View {
+	constructor(template) {
+		this.template = template;
+		this.$todoList = qs('.todo-list');
+		this.$todoItemCounter = qs('.todo-count');
+		this.$clearCompleted = qs('.clear-completed');
+		this.$main = qs('.main');
+		this.$toggleAll = qs('.toggle-all');
+		this.$newTodo = qs('.new-todo');
+		$delegate(this.$todoList, 'li label', 'dblclick', ({target}) => {
+			this.editItem(target);
+		});
+	}
+	editItem(target) {
+		const listItem = target.parentElement.parentElement;
+
+		listItem.classList.add('editing');
+
+		const input = document.createElement('input');
+		input.className = 'edit';
+
+		input.value = target.innerText;
+		listItem.appendChild(input);
+		input.focus();
+	}
+	showItems(items) {
+		this.$todoList.innerHTML = this.template.itemList(items);
+	}
+	removeItem(id) {
+		const elem = qs(`[data-id="${id}"]`);
+
+		if (elem) {
+			this.$todoList.removeChild(elem);
+		}
+	}
+	setItemsLeft(itemsLeft) {
+		this.$todoItemCounter.innerHTML = this.template.itemCounter(itemsLeft);
+	}
+	setClearCompletedButtonVisibility(visible) {
+		this.$clearCompleted.style.display = !!visible ? 'block' : 'none';
+	}
+	setMainVisibility(visible) {
+		this.$main.style.display = !!visible ? 'block' : 'none';
+	}
+	setCompleteAllCheckbox(checked) {
+		this.$toggleAll.checked = !!checked;
+	}
+	updateFilterButtons(route) {
+		qs('.filters .selected').className = '';
+		qs(`.filters [href="#/${route}"]`).className = 'selected';
+	}
+	clearNewTodo() {
+		this.$newTodo.value = '';
+	}
+	setItemComplete(id, completed) {
+		const listItem = qs(`[data-id="${id}"]`);
+
+		if (!listItem) {
+			return;
+		}
+
+		listItem.className = completed ? 'completed' : '';
+
+		// In case it was toggled from an event and not by clicking the checkbox
+		qs('input', listItem).checked = completed;
+	}
+	editItemDone(id, title) {
+		const listItem = qs(`[data-id="${id}"]`);
+
+		const input = qs('input.edit', listItem);
+		listItem.removeChild(input);
+
+		listItem.classList.remove('editing');
+
+		qs('label', listItem).textContent = title;
+	}
+	bindAddItem(handler) {
+		$on(this.$newTodo, 'change', ({target}) => {
+			const title = target.value.trim();
+			if (title) {
+				handler(title);
+			}
+		});
+	}
+	bindRemoveCompleted(handler) {
+		$on(this.$clearCompleted, 'click', handler);
+	}
+	bindToggleAll(handler) {
+		$on(this.$toggleAll, 'click', ({target}) => {
+			handler(target.checked);
+		});
+	}
+	bindRemoveItem(handler) {
+		$delegate(this.$todoList, '.destroy', 'click', ({target}) => {
+			handler(_itemId(target));
+		});
+	}
+	bindToggleItem(handler) {
+		$delegate(this.$todoList, '.toggle', 'click', ({target}) => {
+			handler(_itemId(target), target.checked);
+		});
+	}
+	bindEditItemSave(handler) {
+		$delegate(this.$todoList, 'li .edit', 'blur', ({target}) => {
+			if (!target.dataset.iscanceled) {
+				handler(_itemId(target), target.value.trim());
+			}
+		}, true);
+
+		// Remove the cursor from the input when you hit enter just like if it were a real form
+		$delegate(this.$todoList, 'li .edit', 'keypress', ({target, keyCode}) => {
+			if (keyCode === ENTER_KEY) {
+				target.blur();
+			}
+		});
+	}
+	bindEditItemCancel(handler) {
+		$delegate(this.$todoList, 'li .edit', 'keyup', ({target, keyCode}) => {
+			if (keyCode === ESCAPE_KEY) {
+				target.dataset.iscanceled = true;
+				target.blur();
+
+				handler(_itemId(target));
+			}
+		});
+	}
+}

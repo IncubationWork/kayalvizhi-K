@@ -1,0 +1,34 @@
+{
+    "items": [
+      {
+        "sys": { "id": "1" },
+        "fields": {
+          "name": "BMW M2",
+          "price": "98Lakh",
+          "fuel": "petrol",
+          "steering": "Electric",
+          "speed": 0
+        }
+      },
+      {
+        "sys": { "id": "2" },
+        "fields": {
+          "name": "FZ",
+          "price": "2Lakh",
+          "fuel": "petrol",
+          "steering": "Normal",
+          "speed": 0
+        }
+      },
+      {
+        "sys": { "id": "3" },
+        "fields": {
+          "name": "Ashok Leyland",
+          "price": "25Lakh",
+          "fuel": "petrol",
+          "steering": "Automatic",
+          "speed": 0
+        }
+      }
+    ]
+  }
