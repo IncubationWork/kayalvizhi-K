@@ -7,8 +7,9 @@ const logEmail = document.getElementById('log-email');
 const logPass = document.getElementById('log-password');
 const loginBtn = document.getElementById('navigation');
 const cartImg = document.getElementById('nav-icon');
+const iElem = cartImg.getElementsByTagName('i')[0];
 const cartCount = document.getElementById('cart-items');
-console.log(cartImg);
+console.log(iElem);
 console.log(cartCount);
 console.log(logPass);
 let user_records=new Array();
@@ -43,9 +44,8 @@ const login = () => {
         //localStorage.setItem('name',current_user.name);
         //localStorage.setItem('email',current_user.email);
         loginBtn.style.display = "none";
-        cartImg.style.display = "block";
+        iElem.style.display = "flex";
         cartCount.style.display = "block";
-        //window.location.href="profile.html"
     }
     else {
         alert('Login Fail');
