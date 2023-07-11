@@ -30,12 +30,12 @@ class Storage {
     return products.find(product => product.id === id);
   }
 
-  static saveCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
+  static saveCart(cart,cartName) {
+    localStorage.setItem(cartName, JSON.stringify(cart));
   }
 
-  static getCart() {
-    return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  static getCart(cart) {
+    return localStorage.getItem(cart) ? JSON.parse(localStorage.getItem(cart)) : [];
   }
 }
 

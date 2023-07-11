@@ -1,3 +1,5 @@
+import { UI, CartView } from './ui.js';
+
 const regUser = document.querySelector('#reg-btn');
 const regName = document.getElementById('reg-name');
 const regEmail = document.getElementById('reg-email');
@@ -9,9 +11,6 @@ const loginBtn = document.getElementById('navigation');
 const cartImg = document.getElementById('nav-icon');
 const iElem = cartImg.getElementsByTagName('i')[0];
 const cartCount = document.getElementById('cart-items');
-console.log(iElem);
-console.log(cartCount);
-console.log(logPass);
 let user_records=new Array();
 
 const register = () => {
@@ -38,14 +37,24 @@ const register = () => {
 const login = () => {
     user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
     if(user_records.some((v)=>{return v.email==logEmail.value && v.psw==logPass.value})) {
-        alert("Login Pass");
+
         let current_user=user_records.filter((v)=>{return v.email==logEmail.value && v.psw==logPass.value})[0]
-        console.log(loginBtn);
-        //localStorage.setItem('name',current_user.name);
-        //localStorage.setItem('email',current_user.email);
+        let nameUser = current_user.email;
+
+        if(localStorage.getItem(nameUser) !== null) {
+            cartView.setupAPP(nameUser);
+            console.log("cart available");
+        } else {
+            localStorage.setItem(nameUser, JSON.stringify([]));
+            console.log("cart not available");
+            cartView.setupAPP(nameUser);
+        }
+
         loginBtn.style.display = "none";
         iElem.style.display = "flex";
         cartCount.style.display = "block";
+        //const cartView = new CartView();
+        
     }
     else {
         alert('Login Fail');

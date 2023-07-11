@@ -1,5 +1,7 @@
 import { ProductsModel, Storage } from './product.js';
 
+let userCartName = '';
+
 class UI {
   constructor() {
     this.productsDOM = document.querySelector(".products-center");
@@ -56,15 +58,19 @@ class CartView {
                     event.target.innerText = "In Cart";
                     event.target.disabled = true;
                     let cartItem = {...Storage.getProduct(id),amount: 1};
+                    console.log(this.cart);
                     this.cart = [...this.cart,cartItem];
-                    Storage.saveCart(this.cart);
+                    console.log(userCartName);
+                    Storage.saveCart(this.cart,userCartName);
                     this.setCartValues(this.cart);
                     this.addCartItem(cartItem);
                 })
         })
     }
-    setupAPP(){
-        this.cart = Storage.getCart();
+    setupAPP(cartName){
+        userCartName = cartName;
+        this.cart = Storage.getCart(cartName);
+        console.log(this.cart);
         this.setCartValues(this.cart);
         this.populateCart(this.cart);
         this.cartBtn.addEventListener('click',this.showCart.bind(this));
@@ -154,7 +160,7 @@ class CartView {
                          }
                      } 
                  })
-                 Storage.saveCart(this.cart);
+                 Storage.saveCart(this.cart,userCartName);
                  this.setCartValues(this.cart);
                  addAmount.nextElementSibling.innerText = tempItem.amount;
              } else if (event.target.classList.contains("fa-chevron-down")){
@@ -165,7 +171,7 @@ class CartView {
                  tempItem.amount = tempItem.amount - 1;
              
                  if(tempItem.amount > 0){
-                     Storage.saveCart(this.cart);
+                     Storage.saveCart(this.cart,userCartName);
                      this.setCartValues(this.cart);
                      lowerAmount.parentElement.firstElementChild.nextElementSibling.textContent =tempItem.amount;
                      //lowerAmount.previouElementSibling.textContent = tempItem.amount;
@@ -189,7 +195,7 @@ class CartView {
     removeItem(id){
         this.cart = this.cart.filter(item => item.id !== id);
         this.setCartValues(this.cart);
-        Storage.saveCart(this.cart);
+        Storage.saveCart(this.cart,userCartName);
         let button = this.getSingleButton(id);
         button.disabled = false;
         button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`;
