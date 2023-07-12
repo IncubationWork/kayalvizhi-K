@@ -1,4 +1,5 @@
 import { ProductsModel, Storage } from './product.js';
+import { loginVerification } from './control.js';
 
 let userCartName = '';
 
@@ -55,15 +56,18 @@ class CartView {
                 button.disabled = true;
             }
                 button.addEventListener("click", event => {
+                    if(loginVerification) {
                     event.target.innerText = "In Cart";
                     event.target.disabled = true;
                     let cartItem = {...Storage.getProduct(id),amount: 1};
                     console.log(this.cart);
                     this.cart = [...this.cart,cartItem];
-                    console.log(userCartName);
                     Storage.saveCart(this.cart,userCartName);
                     this.setCartValues(this.cart);
                     this.addCartItem(cartItem);
+                    } else {
+                        alert("Kindly Login");
+                    }
                 })
         })
     }

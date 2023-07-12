@@ -103,6 +103,8 @@ const login = () => {
     else {
         alert('Login Fail');
     }
+    logEmail.value = "";
+    logPass.value = "";
 }
 
 const logout = () => {
@@ -117,6 +119,13 @@ const logout = () => {
 regUser.addEventListener("click",register);
 logUser.addEventListener("click",login);
 logoutBtn.addEventListener("click",logout);
+
+export {loginVerification};
+
+/*document.addEventListener("DOMContentLoaded", function() {
+    logEmail.value = "";
+    logPass.value = "";
+})*/
 
 
 
