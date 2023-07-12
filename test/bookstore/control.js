@@ -1,7 +1,6 @@
 import { ProductsModel, Storage } from './product.js';
 import { UI, CartView } from './ui.js';
 
-
 class Controller {
   constructor(productsModel, ui, cartView) {
     this.productsModel = productsModel;
@@ -99,12 +98,13 @@ const login = () => {
         wrapper.classList.remove('active-popup');
         bannerBox.classList.remove('banner-disable');
         wrapper.style.display = "none";
+        
     }
     else {
         alert('Login Fail');
     }
-    logEmail.value = "";
-    logPass.value = "";
+    //logEmail.value = "";
+    //logPass.value = "";
 }
 
 const logout = () => {

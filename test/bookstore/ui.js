@@ -75,6 +75,7 @@ class CartView {
         userCartName = cartName;
         this.cart = Storage.getCart(cartName);
         this.setCartValues(this.cart);
+        this.cartContent.innerHTML = '';
         this.populateCart(this.cart);
         this.cartBtn.addEventListener('click',this.showCart.bind(this));
         this.closeCartBtn.addEventListener('click',this.hideCart.bind(this));
@@ -254,4 +255,5 @@ class CartView {
 }
 
 export { UI, CartView };
+
 
