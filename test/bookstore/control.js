@@ -36,10 +36,19 @@ const logUser = document.querySelector('#log-btn');
 const logEmail = document.getElementById('log-email');
 const logPass = document.getElementById('log-password');
 const loginBtn = document.getElementById('navigation');
+const logoutBtn = document.getElementById('navigationLog');
 const cartImg = document.getElementById('nav-icon');
 const iElem = cartImg.getElementsByTagName('i')[0];
 const cartCount = document.getElementById('cart-items');
+const wrapper = document.getElementById('wrapper');
+const bannerBox = document.querySelector('.banner');
+const userName = document.getElementById('userName');
+const changeName = document.querySelector('.changeName');
+
 let user_records=new Array();
+let loginVerification = false;
+logoutBtn.style.display = "none";
+userName.style.display = "none";
 
 const register = () => {
     
@@ -63,6 +72,7 @@ const register = () => {
 }
 
 let nameUser = '';
+let userNameDisplay = '';
 
 const login = () => {
     user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
@@ -70,28 +80,43 @@ const login = () => {
 
         let current_user=user_records.filter((v)=>{return v.email==logEmail.value && v.psw==logPass.value})[0]
         nameUser = current_user.email;
+        userNameDisplay = current_user.name;
+        loginVerification = true;
 
         if(localStorage.getItem(nameUser) !== null) {
             cartView.setupAPP(nameUser);
-            console.log("cart available");
         } else {
             localStorage.setItem(nameUser, JSON.stringify([]));
-            console.log("cart not available");
             cartView.setupAPP(nameUser);
         }
 
+        userName.style.display = "block";
+        changeName.textContent = userNameDisplay;
         loginBtn.style.display = "none";
+        logoutBtn.style.display = "flex";
         iElem.style.display = "flex";
         cartCount.style.display = "block";
-        
+        wrapper.classList.remove('active-popup');
+        bannerBox.classList.remove('banner-disable');
+        wrapper.style.display = "none";
     }
     else {
         alert('Login Fail');
     }
 }
 
+const logout = () => {
+    loginBtn.style.display = "flex";
+        logoutBtn.style.display = "none";
+        iElem.style.display = "none";
+        cartCount.style.display = "none";
+        loginVerification = false;
+        userName.style.display = "none";
+}
+
 regUser.addEventListener("click",register);
 logUser.addEventListener("click",login);
+logoutBtn.addEventListener("click",logout);
 
 
 

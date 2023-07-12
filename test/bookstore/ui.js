@@ -70,7 +70,6 @@ class CartView {
     setupAPP(cartName){
         userCartName = cartName;
         this.cart = Storage.getCart(cartName);
-        console.log(this.cart);
         this.setCartValues(this.cart);
         this.populateCart(this.cart);
         this.cartBtn.addEventListener('click',this.showCart.bind(this));
