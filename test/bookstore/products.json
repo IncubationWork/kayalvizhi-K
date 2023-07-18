@@ -24,7 +24,7 @@
         "sys": { "id": "3" },
         "fields": {
           "title": "Kadal Pura",
-          "author": "Akilan",
+          "author": "Sandilyan",
           "price": 500,
           "quantity": 10,
           "image": { "fields": { "file": { "url": "images/kadalpura.jpeg" } } }

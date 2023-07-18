@@ -1,0 +1,19 @@
+<h1>This is Assignment One</h1>
+<h3>Points:</h3>
+<ul>
+    <li>Add a Input dield which updates a property ("username") via two-way-Binding</li>
+    <li>Output the username property via string Interpotation (in a paragraph below the input)</li>
+    <li>Add a button which may only be clicked if the username is NOT an empty string.</li>
+    <li>upon clicking the button, the username should be reset to an empty string.</li>
+</ul>
+<label>Username</label>
+<input type="text" class="form-control"
+[(ngModel)]="username">
+<p>{{ username }}</p>
+<!--<button class="btn btn-primary"
+[disabled]="username === ''"
+(click)="onReset()">Reset User</button> -->
+<button class="btn btn-primary"
+[disabled]="username === ''"
+(click)="username = ''">Reset User</button>
+
