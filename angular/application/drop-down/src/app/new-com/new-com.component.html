@@ -1,0 +1,15 @@
+  <!--<select (change)="selectOption($any($event.target).value)">
+    <option value="" disabled selected>Select an option</option>
+    <option *ngFor="let option of dropdownOptions" [value]="option">{{ option }}</option>
+  </select>
+  <div class="dropdown">
+    <input type="text" class="dropdown-toggle" (click)="toggleDropdown()" [value]="selectedOption" readonly/>
+    <ul class="dropdown-menu" [ngClass]="{ 'show': isDropdownOpen }">
+      <li *ngFor="let option of dropdownOptions" (click)="selectOption(option)">{{ option }}</li>
+    </ul>
+  </div> -->
+  <ul class="dropdown-menu">
+    <li *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</li>
+  </ul>
+  
+  

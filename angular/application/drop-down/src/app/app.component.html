@@ -1,0 +1,8 @@
+
+
+<!--<input type="text" [value]="selectedOption" placeholder="Enter your name" />
+<app-new-com (optionSelected)="selectedOption = $event"></app-new-com> -->
+<input type="text" [value]="selectedOption" placeholder="Enter your name" />
+<app-new-com [options]="dropdownOptions" (optionSelected)="handleOptionSelected($event)"></app-new-com>
+
+

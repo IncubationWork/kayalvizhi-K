@@ -1,0 +1,12 @@
+<h1>List of Array</h1>
+<ul>
+  <li *ngFor="let elem of arr">
+    <div class="custom-checkbox" (click)="toggleCheckbox(elem)">
+      <span class="checkbox-icon" [ngClass]="{'checked': isChecked(elem)}">
+        <span class="tick-icon" *ngIf="isChecked(elem)">&#10004;</span>
+      </span>
+      <span class="checkbox-label">{{ elem }}</span>
+    </div>
+  </li>
+</ul>
+<app-dis-arr [selectedArray]="selectedElements"></app-dis-arr>

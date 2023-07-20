@@ -1,0 +1,30 @@
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    position: relative;
+}
+
+.checkbox-icon.checked {
+    background-color: #7db9f9;
+}
+
+.tick-icon {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+ ul li {
+    list-style: none;
+ }
