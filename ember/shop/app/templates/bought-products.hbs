@@ -1,0 +1,62 @@
+{{page-title "BoughtProducts"}}
+<div class="nav">
+  <LinkTo @route="products" class="viewCart">Home</LinkTo>
+</div>
+<main class="boughtPage">
+  <div class="userProfile">
+    <div class="profileDp">
+      <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+    </div>
+    <div class="conentForuser">
+      <p>Name :{{this.model.name}}</p>
+      <p>Email : {{this.model.email}}</p>
+      <p>Number :{{this.model.number}}</p>
+    </div>
+  </div>
+  <h2 class="purchase"> ⬇ ⬇ Recent Purchase ⬇ ⬇</h2>
+{{#each this.model.product as |cartdata|}}
+  <div class="bcontainer">
+    <div class="imageDiv">
+      <img src={{cartdata.picImg}} alt="value">
+    </div>
+    <div class="contentdiv">
+      <div class="header">
+          <h5>{{cartdata.name}}</h5>
+        </div>
+        <div class="meta">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <div class="description">
+          <del class="small_text">₹{{cartdata.reelPrice}}</del>
+          <i class="currentPrice">₹{{cartdata.realPrice}}</i>
+        </div>
+        <p>Total Quantity :{{cartdata.quantity}}</p>
+        <p class="clrForDelivery">Delivery Within {{cartdata.delivery}} Days</p>
+      
+      </div>
+    </div>
+{{/each}}
+</main>
+<div class="payAmount">
+  <section class="w-50 ml-auto text-right mb-5">
+    <div class="row">
+      <span class="col">Subtotal :</span>
+      <span class="col">{{this.subtotal}}</span>
+    </div>
+    <div class="row">
+      <span class="col">Tax :</span>
+      <span class="col">{{this.tax}}</span>
+    </div>
+    <div class="row">
+      <span class="col">Total :</span>
+      <span class="col">{{this.total}}</span>
+    </div>
+    
+  </section>
+
+  </div>
+{{outlet}}

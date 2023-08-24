@@ -1,0 +1,11 @@
+{{page-title "Products"}}
+<div class="nav">
+  <LinkTo @route="view-cart" class="viewCart">view Cart</LinkTo>
+</div>
+<main class="productContainer">
+{{#each this.model as |product|}}
+  <ProductItem @data={{product}} @addToCart={{this.addToCart }}>
+  </ProductItem>
+{{/each}}
+</main>
+{{outlet}}

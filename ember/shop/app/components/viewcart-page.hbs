@@ -1,0 +1,54 @@
+{{#each @buydata as |cartdata|}}
+<main class="buyContainer" >
+  <div class="bcontainer">
+    <div class="imageDiv">
+      <img src={{cartdata.picImg}} alt="value">
+    </div>
+    <div class="contentdiv">
+      <div class="header">
+          <h5>{{cartdata.name}}</h5>
+        </div>
+        <div class="meta">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <div class="description">
+          <del class="small_text">₹{{cartdata.reelPrice}}</del>
+          <i class="currentPrice">₹{{cartdata.realPrice}}</i>
+        </div>
+      <AddcartButton @cartData={{cartdata}} ></AddcartButton>
+      </div>
+    </div>
+
+    
+</main>
+{{/each}}
+<div class="payAmount">
+  <section class="w-50 ml-auto text-right mb-5">
+    <div class="row">
+      <span class="col">Subtotal :</span>
+      <span class="col">{{this.subtotal}}</span>
+    </div>
+    <div class="row">
+      <span class="col">Tax :</span>
+      <span class="col">{{this.tax}}</span>
+    </div>
+    <div class="row">
+      <span class="col">Total :</span>
+      <span class="col">{{this.total}}</span>
+    </div>
+    <div class=" rows">
+      
+        <button type="button" {{on "click" this.boughtProduct}} class="btn btn-success float-right">
+          Buy Now
+        </button>
+      
+    </div>
+  </section>
+
+  </div>
+
+{{yield}}

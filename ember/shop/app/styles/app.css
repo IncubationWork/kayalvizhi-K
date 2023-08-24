@@ -1,0 +1,573 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Quicksand, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.container .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* height: 100%; */
+  background: rgb(255 255 255 / 20%);
+
+  /* box-shadow: none; */
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.container .box img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.container .box h1 {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.container .box .row {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.container .box .row::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.container .box .row:nth-of-type(1)::before {
+  content: "\f007";
+}
+
+.container .box .row:nth-of-type(2)::before {
+  content: "\f023";
+}
+
+.container .box .row input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  height: 20px;
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #262626;
+}
+
+.container .box .row input:focus {
+  border-color: green;
+}
+
+.container .box .row p {
+  color: red;
+}
+
+.container .box .login {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: green;
+  padding: 17px 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin: 40px 0 20px;
+  width: 100%;
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: -50px;
+  color: darkgoldenrod;
+}
+
+.productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #f6e7b5;
+}
+
+.cards {
+  width: 24%;
+  height: 400px;
+  border: 1px solid black;
+  margin: 20px;
+  background: #4545a2;
+  color: white;
+  border-radius: 9px;
+  transition: 0.3s;
+}
+
+.cards > .card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3.4%), 0 6.7px 5.3px rgb(0 0 0 / 4.8%),
+    0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7.2%),
+    0 41.8px 33.4px rgb(0 0 0 / 8.6%), 0 100px 80px rgb(0 0 0 / 12%);
+}
+
+.image {
+  width: 60%;
+  height: 50%;
+}
+
+.card > .detailsLink > .image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.card > .detailsLink > .content {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card > .contents {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content > .header {
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.content > .meta {
+  color: gold;
+  font-size: 16px;
+}
+
+.content > .description {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.floated {
+  font-size: 20px;
+}
+
+.extra > span > button {
+  width: 100px;
+  height: 30px;
+  font-size: 17px;
+  background-color: greenyellow;
+  color: black;
+  transition: 0.3s;
+  outline: none;
+}
+
+.extra > span > button:hover {
+  transform: scale(0.95);
+}
+
+.detailsLink {
+  width: 100%;
+  height: 85%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maincontainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  /* margin-top: 40px; */
+  align-items: center;
+  justify-content: center;
+  background: #f6e7b5;
+}
+
+.detailContent {
+  width: 55%;
+  height: 100%;
+
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.product-content {
+  width: 80%;
+  height: 40%;
+
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4545a2;
+  color: white;
+  border-radius: 9px;
+}
+
+.product-content > .productImage {
+  width: 40%;
+  height: 100%;
+}
+
+.product-content > .productImage > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+}
+
+.name {
+  width: 100%;
+  text-align: left;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.product-content > .detailforProduct {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-left: 10px;
+  font-size: 20px;
+  padding-top: 9px;
+}
+
+.detailforProduct > .meta {
+  font-size: 27px;
+  color: gold;
+}
+
+.detailforProduct > .description {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.detailforProduct > .stock {
+  font-size: 29px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.detailforProduct > .btnRoute {
+  width: auto;
+  height: auto;
+}
+
+.detailforProduct > .btnRoute > .btn_for_buy {
+  width: 120px;
+  height: 35px;
+  font-size: 22px;
+  outline: none;
+  border-radius: 8px;
+  background: greenyellow;
+  color: black;
+}
+
+.detailOnly {
+  width: 80%;
+  height: 50%;
+  border-radius: 9px;
+
+  /* border: 2px solid red; */
+  background: #4545a2;
+  padding: 9px;
+  color: white;
+}
+
+.detailOnly > .detName {
+  font-size: 29px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.detailOnly > .details {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.detailOnly > .details > p {
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.buyContainer {
+  width: 100%;
+  height: auto;
+
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bcontainer {
+  width: 70%;
+  height: 300px;
+  margin: 10px;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4545a2;
+}
+
+.bcontainer > .imageDiv {
+  width: 40%;
+  height: 100%;
+}
+
+.bcontainer > .imageDiv > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+}
+
+.bcontainer > .contentdiv {
+  width: 60%;
+  height: 70%;
+
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 25px;
+  color: white;
+}
+
+.meta {
+  color: gold;
+}
+
+.contentdiv > .header > h5 {
+  font-size: 25px;
+}
+
+.btnForAdd {
+  font-size: 21px;
+  width: 50px;
+  height: 25px;
+}
+
+.payAmount {
+  width: 100%;
+  height: 400px;
+  margin-top: 25px;
+
+  /* border: 1px solid black; */
+}
+
+.payAmount > section {
+  width: 50%;
+  height: 50%;
+
+  /* margin: auto; */
+
+  /* text-align: center; */
+  display: flex;
+
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 5%;
+
+  /* border: 1px solid black; */
+  float: right;
+  font-size: 24px;
+}
+
+.payAmount > section > .row {
+  padding-left: 20px;
+}
+
+.rows {
+  text-align: center;
+}
+
+.btn {
+  width: 180px;
+  height: 40px;
+  font-size: 29px;
+  background: greenyellow;
+  color: black;
+}
+
+.btnForAdd {
+  text-align: center;
+  height: 20px;
+}
+
+.contentdiv > .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentdiv > .header > h5 {
+  text-align: center;
+}
+
+.clsforcart > button {
+  color: black;
+  background: greenyellow;
+  font-size: 18px;
+  padding: 3px;
+  outline: none;
+  border-radius: 7px;
+}
+
+.nav {
+  width: 100%;
+  height: 40px;
+  background-color: #f6e7b5;
+}
+
+.nav > .viewCart {
+  float: right;
+  margin-right: 50px;
+  margin-top: 5px;
+  text-decoration: none;
+  background: #4545a2;
+  color: white;
+  padding: 2px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.buyContainer {
+  background: #f6e7b5;
+  color: white;
+}
+
+.boughtPage {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f6e7b5;
+}
+
+.userProfile {
+  width: 40%;
+  height: 200px;
+  display: flex;
+
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin-top: 24px;
+  border-radius: 9px;
+}
+
+.userProfile > .profileDp {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 9px;
+}
+
+.userProfile > .profileDp > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+}
+
+.conentForuser {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  background: #4545a2;
+  color: white;
+}
+
+.clrForDelivery {
+  color: rgb(228 52 52);
+
+  /* font-weight: bold; */
+}
+
+.purchase {
+  margin-top: 20px;
+  color: #4545a2;
+  text-align: center;
+}
+
+body {
+  background: #f6e7b5;
+}
+
+.conentForuser > p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.payAmount {
+  color: #4545a2;
+  font-weight: bold;
+}

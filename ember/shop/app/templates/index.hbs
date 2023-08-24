@@ -1,0 +1,36 @@
+{{page-title "Index"}}
+<div class="container">
+    <h1 class="welcome">Welcome to smart shop</h1>
+    
+    <div class="box">
+        <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+    <h1>Sign In Here</h1>
+    
+    <div class="row">
+      <Input 
+        @type="text"
+        placeholder="Name.."
+        @value ={{this.name}}
+      />
+      <p>{{this.errForName}}</p>
+    </div>
+    <div class="row">
+      <Input
+        @type="e-mail" 
+        placeholder="E-mail.."
+        @value ={{this.email}}
+      />
+      <p>{{this.errForEmail}}</p>
+    </div>
+    <div class="row">
+        <Input
+          @type="number" 
+          placeholder="Phone Number.."
+          @value ={{this.number}}
+        />
+        <p>{{this.errForNumber}}</p>
+    </div>
+    <button class="login loginBtn" type="button" {{on "click" this.checkUserData }}>Login</button>
+</div>
+</div>
+{{outlet}}

@@ -1,0 +1,10 @@
+{{#if this.toggleBody}}
+  <h3 class="clsforcart"><button type="button" {{on "click" (fn this.changeValue @cartData) }}>Add Cart</button></h3>
+{{else}}
+  <div class="quantity">
+    <i class="fas fa-minus"{{on "click" (fn this.decreQuantity 1)}}></i>
+    <input class="btnForAdd" type="number" value={{this.calcQuantity}} />
+    <i class="fas fa-plus"{{on "click" (fn this.increQuantity 1)}} ></i>
+  </div>
+{{/if}}
+{{yield}}

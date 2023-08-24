@@ -1,0 +1,40 @@
+{{page-title "ProductDetails"}}
+<div class="nav">
+  <LinkTo @route="view-cart" class="viewCart">view Cart</LinkTo>
+</div>
+<main class="maincontainer">
+<div class="detailContent">
+  <div class="product-content">
+    <div class="productImage">
+      <img src={{this.model.picImg}}/>
+    </div>
+    <div class="detailforProduct">
+        <div class="header">
+          <h5 class="name">{{this.model.name}}</h5>
+        </div>
+        <div class="meta">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <div class="description">
+          <del class="small_text">₹{{this.model.reelPrice}}</del>
+          <i class="currentPrice">₹{{this.model.realPrice}}</i>
+        </div>
+        <div class="stockDetail">
+          <p>{{this.model.stock}}</p>
+        </div>
+        <AddcartButton @cartData={{this.model}}></AddcartButton>
+    </div>
+  </div>
+  <div class="detailOnly">
+    <span class="detName">Details :</span>
+    <div class="details">
+      <p>{{this.model.detail}}</p>
+    </div>
+  </div>
+</div>
+</main>
+{{outlet}}

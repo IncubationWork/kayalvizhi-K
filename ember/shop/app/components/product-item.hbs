@@ -1,0 +1,35 @@
+<div class="ui link cards">
+  <div class="card">
+    <LinkTo @route="product-details" class="detailsLink" @model={{@data.id}}>
+
+      <div class="image">
+      <img src={{@data.picImg}} alt="value">
+      </div>
+      <div class="content">
+        <div class="header">
+          <h5>{{@data.name}}</h5>
+        </div>
+        <div class="meta">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half"></i>
+        </div>
+        <div class="description">
+          <del class="small_text"> ₹{{@data.reelPrice}}</del>
+          <i class="currentPrice">₹{{@data.realPrice}}</i>
+        </div>
+      </div>
+    </LinkTo>
+    <div class="extra contents">
+      <span class="right floated">
+        {{@data.stock}}
+      </span>
+      <span>
+        <AddcartButton @cartData={{@data}} ></AddcartButton>
+      </span>
+    </div>
+  </div>
+</div>
+{{yield}}
