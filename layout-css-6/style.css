@@ -71,9 +71,6 @@
 
 @media(max-width:1024px){
     .container{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
     grid-template-areas: 
     'head head head'
     'hero hero hero'
